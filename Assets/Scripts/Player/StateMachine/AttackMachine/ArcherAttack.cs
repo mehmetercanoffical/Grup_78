@@ -1,4 +1,5 @@
 using UnityEngine;
+using static ThirdPersonCamera;
 
 public class ArcherAttack : AttackMachineBase
 {
@@ -14,10 +15,12 @@ public class ArcherAttack : AttackMachineBase
 
     public override void UpdateState(AttackMachineBaseManager attack)
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(1))
         {
-            attack.Attack.SetTrigger("SwordAttack");
+            ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Combat);
         }
+        else
+            ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Basic);
     }
 }
 

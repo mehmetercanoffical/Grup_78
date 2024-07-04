@@ -1,44 +1,90 @@
+using System.Collections;
 using UnityEngine;
 
-public class ThirdPersonCamera : MonoBehaviour
+public class ThirdPersonCamera : Singleton<ThirdPersonCamera>
 {
-    public Transform character; // Karakterin Transform bileþeni
-    public Transform headPoint; // Karakterin baþýndaki point
-    public float mouseSensitivity = 100f; // Mouse hassasiyeti
-    public float distanceFromHead = 2f; // Kameranýn baþtan uzaklýðý
-    public float verticalOffset = 0.5f; // Kameranýn dikey kaymasý
+    public Transform Player;
+    public float smoothSpeed = 0.125f;
+    public float switchSpeed = 2f;
 
-    private float xRotation = 0f; // X eksenindeki rotasyon
-    private float yRotation = 0f; // Y eksenindeki rotasyon
+    public Vector3 MainCameraOffset;
+    public Vector3 CombatCameraOffset;
 
-    void Start()
+    public Transform MainCamera;
+    public Transform CombatCamera;
+
+    public CameraStyle currentStyle;
+
+    public float mouseSensitivity = 100f;
+    private float xRotation = 0f;
+    private float yRotation = 0f;
+    private Transform targetCamera;
+
+    public Vector2 mainYClamp;
+    public Vector2 combatYClamp;
+
+    public enum CameraStyle
     {
-        // Cursor'u gizle ve kilitle
-        Cursor.lockState = CursorLockMode.Locked;
+        Basic,
+        Combat
     }
 
-    void Update()
+    private void Awake()
     {
-        // Mouse hareketlerini oku
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        SwitchCameraStyle(CameraStyle.Basic);
+    }
+
+    private void LateUpdate()
+    {
+        // Rotate Camera with Mouse X and Y
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        // Y eksenindeki hareketi sýnýrlý bir þekilde uygula
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, mainYClamp.x, mainYClamp.y); 
 
-        // X ekseninde hareketi uygula
+
         yRotation += mouseX;
 
-        // Kamera rotasyonunu hesapla ve uygula
-        transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
+        if (currentStyle == CameraStyle.Combat)
+            yRotation = Mathf.Clamp(yRotation, combatYClamp.x, combatYClamp.y); 
 
-        // Kamerayý karakterin baþýndaki point noktasýna göre ayarla
-        Vector3 offset = new Vector3(0, verticalOffset, -distanceFromHead);
-        transform.position = headPoint.position + transform.rotation * offset;
+        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
 
-        // Karakterin kamera yönüne doðru dönmesini saðla
-        character.rotation = Quaternion.Euler(0f, yRotation, 0f);
+        // Position the camera behind the player
+        Vector3 desiredPosition = Player.position + transform.rotation * (currentStyle == CameraStyle.Basic ? MainCameraOffset : CombatCameraOffset);
+        transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+
+
+
+    }
+    internal void SwitchCameraStyle(CameraStyle newStyle)
+    {
+        if (currentStyle != newStyle)
+        {
+            currentStyle = newStyle;
+            StartCoroutine(ChangeController(currentStyle == CameraStyle.Basic ? MainCamera : CombatCamera, switchSpeed));
+        }
     }
 
+    IEnumerator ChangeController(Transform target, float speed)
+    {
+        targetCamera = target;
+
+        Vector3 startPos = transform.position;
+        Vector3 endPos = target.position;
+        float elapsedTime = 0f;
+
+        while (Vector3.Distance(startPos, endPos) < .5f)
+        {
+            transform.position = Vector3.Lerp(startPos, endPos, elapsedTime);
+            elapsedTime = Time.deltaTime * speed;
+
+            yield return null;
+        }
+
+        transform.position = endPos;
+    }
 }

@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
     public float speed = 5f;
     public float lerpSpeed = .2f;
     public float maxLength = 1f;
+    public float rotationSpeed = 1f;
 
     public float jumpForce = 5f;
     public float gravity = 9.8f;
@@ -18,8 +19,8 @@ public class PlayerMove : MonoBehaviour
     public Transform ThirdPersonCamera;
     private CharacterController controller;
 
-
-
+    float horizontalInput;
+    float verticalInput;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -28,29 +29,33 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
 
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+         horizontalInput = Input.GetAxis("Horizontal");
+         verticalInput = Input.GetAxis("Vertical");
+
+        Rotate();
+
 
         moveVector = new Vector3(horizontalInput, 0, verticalInput);
-
         InputMove();
         Gravity();
-        Rotate();
         controller.Move(moveVector * Time.deltaTime * speed);
 
 
     }
 
-    void InputMove()
-    {
-        anim.SetFloat(Speed, Vector3.ClampMagnitude(moveVector, 1).magnitude, maxLength, Time.deltaTime * 10);
-    }
+    void InputMove() => anim.SetFloat(Speed, Vector3.ClampMagnitude(moveVector, 1).magnitude, maxLength, Time.deltaTime * 10);
 
     void Rotate()
     {
-        Vector3 rotOffset = ThirdPersonCamera.transform.TransformDirection(moveVector);
-        rotOffset.y = 0;
-        transform.forward = Vector3.Lerp(transform.forward, rotOffset, lerpSpeed);
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+
+        if (movementDirection != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+
+            // Karakteri dönüþtür
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
 
     }
 
