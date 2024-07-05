@@ -1,30 +1,41 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackMachineBaseManager : MonoBehaviour
 {
 
-    
-    public Animator Attack;
+    [Header("Animator")]
 
+    public Animator AttackAnim;
     public AnimatorOverrideController SwordAttack;
     public AnimatorOverrideController BowAttack;
 
-
     public AttackMachineBase currentState;
     public SwordAttack swordAttack = new SwordAttack();
-    public ArcherAttack ArcherAttack = new ArcherAttack();
+    public ArcherAttack archerAttack = new ArcherAttack();
+    public FreeAttack freeAttack = new FreeAttack();
+    
+    [Header("Bow Attack")]
+    public GameObject Bow;
+    public Transform BowHandle;
+    public Transform BowBreak;
+
+    [Header("Sword Attack")]
+    public GameObject Sword;
+    public Transform SwordHandle;
+    public Transform SwordBreak;
+    public List<string> swordAttackAnim = new List<string>();
+
+    [HideInInspector] public bool isSwordOnHandle = false;
+    [HideInInspector] public bool isBowOnHandle = false;
 
 
-
-    void Start() => SetState(swordAttack);
+    void Start() => SetState(freeAttack);
 
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.E))
-            SetState(ArcherAttack);
+            SetState(archerAttack);
 
         if (Input.GetKeyDown(KeyCode.Q))
             SetState(swordAttack);
@@ -35,11 +46,41 @@ public class AttackMachineBaseManager : MonoBehaviour
     void SetState(AttackMachineBase state)
     {
         currentState?.ExitState(this);
-
         currentState = state;
+        
         gameObject.name = "Player - " + state.GetType().Name;
-
         currentState?.EnterState(this);
 
+    }
+
+    // DON'T DELETE
+    public void GetSword()
+    {
+
+        if (isSwordOnHandle) AttackObject(Sword, SwordBreak);
+        else AttackObject(Sword, SwordHandle);
+        isSwordOnHandle = !isSwordOnHandle;
+    }
+
+    // DON'T DELETE
+    public void GetBow()
+    {
+        if (isBowOnHandle) AttackObject(Bow, BowBreak);
+        else AttackObject(Bow, BowHandle);
+        isBowOnHandle = !isBowOnHandle;
+    }
+
+    void AttackObject(GameObject obj, Transform parent)
+    {
+        obj.transform.SetParent(parent);
+        obj.transform.position = parent.position;
+        obj.transform.rotation = parent.rotation;
+    }
+
+    // DON'T DELETE
+    void TransactionAnimation()
+    {
+        //if (currentState == swordAttack) GetSword();
+        //else if(currentState == archerAttack) GetBow();
     }
 }
