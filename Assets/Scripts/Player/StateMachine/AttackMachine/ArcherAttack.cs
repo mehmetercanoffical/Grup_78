@@ -3,21 +3,16 @@ using static ThirdPersonCamera;
 
 public class ArcherAttack : AttackMachineBase
 {
-    public float ArcherBleend = 0.2f;
-    private int archerBlendTitle = Animator.StringToHash("Arrow");
-    private int arrowAttackTitle = Animator.StringToHash("ArrowAttack");
+    private int arrowlastFire = Animator.StringToHash("ArrowAttack");
     private int disamArrowTitle = Animator.StringToHash("disamArrow");
+    private int drawArrowTitle = Animator.StringToHash("drawArrow");
     private int getArrowTitle = Animator.StringToHash("getArrow");
-    public float lerpTime = 2f;
-    float endValue = .2f;
+    bool first = false;
 
     public override void EnterState(AttackMachineBaseManager attack)
     {
 
         attack.AttackAnim.runtimeAnimatorController = attack.BowAttack;
-
-        //if (!attack.isBowOnHandle)
-        //    attack.AttackAnim.SetTrigger(getArrowTitle);
 
     }
 
@@ -30,37 +25,54 @@ public class ArcherAttack : AttackMachineBase
     }
     public override void UpdateState(AttackMachineBaseManager attack)
     {
-        if (Input.GetMouseButton(1))
-            ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Combat);
-        else
-            ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Basic);
+        MouseOne();
 
+        MouseZero(attack);
 
+    }
+
+    private void MouseZero(AttackMachineBaseManager attack)
+    {
         if (Input.GetMouseButtonDown(0))
         {
             if (!attack.isBowOnHandle)
                 attack.AttackAnim.SetTrigger(getArrowTitle);
-            else 
+            else
             {
+                if (!first) return;
                 attack.isBowOnHandle = true;
-                attack.AttackAnim.SetFloat(archerBlendTitle, .2f);
+                attack.AttackAnim.SetTrigger(drawArrowTitle);
             }
 
         }
         if (Input.GetMouseButton(0))
         {
-            if(endValue <= 1) endValue += Mathf.Lerp(ArcherBleend, 1, lerpTime * Time.deltaTime);
+            if (!first) return;
 
-            attack.AttackAnim.SetFloat(archerBlendTitle, endValue);
         }
         if (Input.GetMouseButtonUp(0))
         {
-            endValue = .2f;
-            attack.AttackAnim.SetTrigger(arrowAttackTitle);
-            attack.AttackAnim.SetFloat(archerBlendTitle, 0f);
+            if (!first)
+            {
+                first = true;
+                return;
+            }
+
+            if(PlayerMove.Instance.isPlayerMoving) return;
+            attack.AttackAnim.SetTrigger(arrowlastFire);
+            attack.archer.Shoot();
 
         }
     }
+
+    void MouseOne()
+    {
+        if (Input.GetMouseButton(1))
+            ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Combat);
+        else
+            ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Basic);
+    }
+
 
 
 }

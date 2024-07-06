@@ -14,11 +14,12 @@ public class AttackMachineBaseManager : MonoBehaviour
     public SwordAttack swordAttack = new SwordAttack();
     public ArcherAttack archerAttack = new ArcherAttack();
     public FreeAttack freeAttack = new FreeAttack();
-    
+
     [Header("Bow Attack")]
     public GameObject Bow;
     public Transform BowHandle;
     public Transform BowBreak;
+    public Archer archer;
 
     [Header("Sword Attack")]
     public GameObject Sword;
@@ -34,11 +35,9 @@ public class AttackMachineBaseManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            SetState(archerAttack);
+        if (Input.GetKeyDown(KeyCode.E)) SetState(archerAttack);
 
-        if (Input.GetKeyDown(KeyCode.Q))
-            SetState(swordAttack);
+        if (Input.GetKeyDown(KeyCode.Q)) SetState(swordAttack);
 
         currentState?.UpdateState(this);
     }
@@ -47,12 +46,14 @@ public class AttackMachineBaseManager : MonoBehaviour
     {
         currentState?.ExitState(this);
         currentState = state;
-        
+
         gameObject.name = "Player - " + state.GetType().Name;
         currentState?.EnterState(this);
 
     }
 
+
+    #region Get Attack Obj Region
     // DON'T DELETE
     public void GetSword()
     {
@@ -77,10 +78,14 @@ public class AttackMachineBaseManager : MonoBehaviour
         obj.transform.rotation = parent.rotation;
     }
 
+
     // DON'T DELETE
     void TransactionAnimation()
     {
         //if (currentState == swordAttack) GetSword();
         //else if(currentState == archerAttack) GetBow();
     }
+
+    #endregion
+
 }

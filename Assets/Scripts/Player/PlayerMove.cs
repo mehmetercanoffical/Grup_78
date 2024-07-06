@@ -2,7 +2,7 @@ using UnityEngine;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 using static UnityEngine.EventSystems.StandaloneInputModule;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove : Singleton<PlayerMove>
 {
     public float speed = 5f;
     public float lerpSpeed = .2f;
@@ -20,39 +20,64 @@ public class PlayerMove : MonoBehaviour
 
     private const string Speed = "Speed";
     private string horizontalInput = "Horizontal";
-    private  string verticalInput = "Vertical";
+    private string verticalInput = "Vertical";
+    private int jump = Animator.StringToHash("Jump");
     private Vector3 moveVector;
+    Vector3 rotOffset;
+
+    public bool isPlayerMoving = false;
+
+
+
 
     void Start() => controller = GetComponent<CharacterController>();
 
     void Update()
     {
 
-        float horizontal= Input.GetAxis(horizontalInput);
+        float horizontal = Input.GetAxis(horizontalInput);
         float vertical = Input.GetAxis(verticalInput);
         moveVector = new Vector3(horizontal, 0, vertical);
 
-
+        Jump();
         Rotate();
+        Move();
         MovecClamp();
         Gravity();
 
-        controller.Move(moveVector * Time.deltaTime * speed);
-
-
     }
 
+    void Jump()
+    {
+        if (controller.isGrounded && Input.GetKeyDown(KeyCode.Space))
+            anim.SetTrigger(jump);
+    }
     void Rotate()
     {
         if (moveVector != Vector3.zero)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(moveVector, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            rotOffset = ThirdPersonCamera.TransformDirection(moveVector);
+            rotOffset.y = 0;
+            rotOffset.Normalize();
+            Quaternion rotTarget = Quaternion.LookRotation(rotOffset);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotTarget, Time.deltaTime * rotationSpeed);
         }
+    }
+    void Move()
+    {
+        if (moveVector != Vector3.zero)
+        {
+            Vector3 move = Vector3.Slerp(transform.forward, rotOffset, Time.deltaTime * speed);
+            controller.Move((move.normalized / 2) * Time.deltaTime);
+            isPlayerMoving = true;
+        }
+        else
+            isPlayerMoving = false;
     }
 
 
-    void MovecClamp() => anim.SetFloat(Speed, Vector3.ClampMagnitude(moveVector, 1).magnitude, maxLength, Time.deltaTime * 10);
+    void MovecClamp() => anim.SetFloat(Speed, 
+                Vector3.ClampMagnitude(moveVector, 1).magnitude, maxLength, Time.deltaTime * 10);
 
     private void Gravity()
     {

@@ -38,7 +38,6 @@ public class ThirdPersonCamera : Singleton<ThirdPersonCamera>
 
     private void LateUpdate()
     {
-        // Rotate Camera with Mouse X and Y
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -56,6 +55,7 @@ public class ThirdPersonCamera : Singleton<ThirdPersonCamera>
         // Position the camera behind the player
         Vector3 desiredPosition = Player.position + transform.rotation * (currentStyle == CameraStyle.Basic ? MainCameraOffset : CombatCameraOffset);
         transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+
 
 
 
