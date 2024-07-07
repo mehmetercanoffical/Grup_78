@@ -5,6 +5,7 @@ Unity Takım 78
 
 ## Takım Üyeleri
 ⦁ Mert Yaman ➼ Product Owner / Scrum Master 
+
 ⦁ Mehmet Ali Ercan ➼ Developer 
 ⦁ Elif Dilekli ➼ Developer 
 ⦁ Kaan Erdoğan ➼ Developer 
