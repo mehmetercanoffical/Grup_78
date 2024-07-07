@@ -52,6 +52,9 @@ https://trello.com/b/BUbkaDBo/product-backlog
 
 Ürün Durumu Hakkında Ekran Görüntüleri: 
 
+https://github.com/mehmetercanoffical/Grup_78/assets/163590073/83a986b2-19d1-4329-bb88-8bbc6807d818
+
+
 
 
 
