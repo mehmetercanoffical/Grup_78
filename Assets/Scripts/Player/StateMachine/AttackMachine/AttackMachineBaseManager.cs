@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
-
-public class AttackMachineBaseManager : MonoBehaviour
+namespace AttackSystem
+{
+    public class AttackMachineBaseManager : MonoBehaviour
 {
 
     [Header("Animator")]
@@ -78,14 +79,13 @@ public class AttackMachineBaseManager : MonoBehaviour
         obj.transform.rotation = parent.rotation;
     }
 
-
-    // DON'T DELETE
-    void TransactionAnimation()
-    {
-        //if (currentState == swordAttack) GetSword();
-        //else if(currentState == archerAttack) GetBow();
-    }
-
+   
     #endregion
 
+    public void DestroyArrow()
+    {
+
+        archer.DestroyArrow();
+    }
+}
 }

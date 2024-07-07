@@ -1,6 +1,4 @@
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
-using static UnityEngine.EventSystems.StandaloneInputModule;
 
 public class PlayerMove : Singleton<PlayerMove>
 {
@@ -56,11 +54,16 @@ public class PlayerMove : Singleton<PlayerMove>
     {
         if (moveVector != Vector3.zero)
         {
+
             rotOffset = ThirdPersonCamera.TransformDirection(moveVector);
             rotOffset.y = 0;
+            
             rotOffset.Normalize();
+
             Quaternion rotTarget = Quaternion.LookRotation(rotOffset);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotTarget, Time.deltaTime * rotationSpeed);
+            rotTarget.z = 0;    
+            rotTarget.Normalize();
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotTarget, Time.deltaTime * rotationSpeed);
         }
     }
     void Move()

@@ -304,6 +304,37 @@ Transform:
   - {fileID: 1330796045}
   m_Father: {fileID: 5742672708287666866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180.48}
+--- !u!1 &526093127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 526093128}
+  m_Layer: 0
+  m_Name: Arrow On Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &526093128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526093127}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.09174373, y: -0.06378551, z: 0.993498, w: -0.021819556}
+  m_LocalPosition: {x: -0.059, y: 0.457, z: 0.102}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1852576806981570966}
+  m_LocalEulerAnglesHint: {x: 7.513, y: -10.432, z: 181.83}
 --- !u!1 &557033077
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,13 +412,14 @@ MonoBehaviour:
   smoothSpeed: 3
   switchSpeed: 2
   MainCameraOffset: {x: 0, y: 2, z: -5}
-  CombatCameraOffset: {x: 1, y: 2, z: -1}
+  CombatCameraOffset: {x: 1, y: 2, z: -2}
   MainCamera: {fileID: 1693245454}
   CombatCamera: {fileID: 591231814}
   currentStyle: 0
   mouseSensitivity: 100
   mainYClamp: {x: -35, y: 60}
-  combatYClamp: {x: -120, y: 90}
+  combatYClamp: {x: 150, y: 180}
+  mainCamera: {fileID: 1693245457}
 --- !u!1 &591231810
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,37 +606,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &840160109
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 840160110}
-  m_Layer: 0
-  m_Name: Arrow On Handle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &840160110
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 840160109}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.9860269, y: -0.1125038, z: -0.07407671, w: 0.098012984}
-  m_LocalPosition: {x: 0.076, y: 0.663, z: -0.104}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2563496969251593206}
-  m_LocalEulerAnglesHint: {x: 10.173, y: -170.164, z: -166.104}
 --- !u!143 &908602741
 CharacterController:
   m_ObjectHideFlags: 0
@@ -786,7 +787,8 @@ GameObject:
   - component: {fileID: 1463751548}
   - component: {fileID: 1463751547}
   - component: {fileID: 1463751546}
-  m_Layer: 0
+  - component: {fileID: 1463751549}
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -879,6 +881,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463751544}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1463751549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463751544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da88aa660c53ea24297a15aa0647f4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1463778733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,13 +1117,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118251348}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0062776045, y: 0.043937713, z: 0.0047469735, w: 0.9990033}
-  m_LocalPosition: {x: -0.03400004, y: -0.09099972, z: -0.055000514}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.43, y: -0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1151388028523742574}
-  m_LocalEulerAnglesHint: {x: 0.695, y: 5.04, z: 0.575}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &9171099853103271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,10 +1593,11 @@ MonoBehaviour:
   speed: 5
   lerpSpeed: 0.2
   maxLength: 1.5
-  rotationSpeed: 120
+  rotationSpeed: 10
   jumpForce: 5
   anim: {fileID: 919132148787925777}
   ThirdPersonCamera: {fileID: 557070933}
+  isPlayerMoving: 0
 --- !u!95 &919132148787925777
 Animator:
   serializedVersion: 5
@@ -1628,9 +1643,9 @@ MonoBehaviour:
   SwordBreak: {fileID: 473469335}
   swordAttackAnim:
   - SwordAttackHoriziontal
+  - Combo2
   - VerticalSwordAttack
   - Combo1
-  - Combo2
   isSwordOnHandle: 0
   isBowOnHandle: 0
 --- !u!114 &919132148787925779
@@ -1647,9 +1662,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Arrow: {fileID: 6218842123749659249, guid: 17f53839d3b309149b99d32081c56bd7, type: 3}
   CreatArrowPoint: {fileID: 1005166804}
-  ArrowOnHand: {fileID: 840160110}
+  ArrowOnHand: {fileID: 526093128}
   ArrowFirePoint: {fileID: 2118251349}
-  attackSpeed: 10
+  attackSpeed: 100
+  maskEnemy:
+    serializedVersion: 2
+    m_Bits: 64
+  arrow: {fileID: 0}
 --- !u!1 &919132149271424652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2286,6 +2305,7 @@ Transform:
   - {fileID: 9118793900500666706}
   - {fileID: 8447082966436706976}
   - {fileID: 949207350}
+  - {fileID: 526093128}
   m_Father: {fileID: 2563496969251593206}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1862624587246939185
@@ -2645,7 +2665,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1852576806981570966}
-  - {fileID: 840160110}
   m_Father: {fileID: 6000407479049630043}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2586065998099146144
