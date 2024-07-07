@@ -40,7 +40,8 @@ https://trello.com/b/BUbkaDBo/product-backlog
 # SPRINT 1 
 
 
-Uploading WhatsApp Video 2024-07-03 at 22.10.09.mp4…
+
+![Uploading images.jpg…]()
 
 
 
