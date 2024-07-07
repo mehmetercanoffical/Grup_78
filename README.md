@@ -19,6 +19,7 @@ Unity Takım 78
 
 
 ## Product Backlog URL
+
 https://trello.com/b/BUbkaDBo/product-backlog
 
 ## Oyunun Hikayesi
@@ -48,12 +49,26 @@ https://trello.com/b/BUbkaDBo/product-backlog
 ➼ Tasarım ve Developing Kısmı: İlk sprintte görev ayrımı gözetmeksizin herkes yazılımla ilgilenmiştir.
 
 ➼ Sprint-1 Board Screenshot:
+
 ![ProductBacklog](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/b4317dc5-20cb-4b67-8325-753d7ffcf44f)
 
-Ürün Durumu Hakkında Ekran Görüntüleri: 
+➼ Ürün Durumu Hakkında Ekran Görüntüleri: 
 
 https://github.com/mehmetercanoffical/Grup_78/assets/163590073/83a986b2-19d1-4329-bb88-8bbc6807d818
 
+➼ Sprint Review:
+
+   * Görev Dağılımları Belirlendi.
+   * Oyunun İsmi, Hikayesi ve Teması Belirlendi.
+   * Ana Karakter ve Düşmanlara Ait Assetler bulundu.
+   * Temel Mekanikler Geliştirilerek Karakterin Hareket Animasyonları ve Mekanikleri Eklenmiştir.
+   * Sahne Tasarımlarına başlanıldı.
+
+➼ Sprint Retrospective:
+   * Bazı Teknik Aksaklıklar ve Bazı Görevlerin Yerine Getirilmemiş Olması Gerekçesiyle Ekip İçindeki Görev Dağılımıyla İlgili Düzenleme Yapılması Gerektiği Kararı Alınmıştır.
+   * Ekip İçerisindeki Üyelerin Aktiflik Durumları Yetersiz Olarak Görülmüş ve İletişim Konusunda Büyük Aksaklıkların Ortaya Çıktığı Tespit Edilmiştir ve Tüm Ekip Üyeleri Bu Noktada 
+     Uyarılarak Bir Sonraki Sprintte Aktil Olmaları Gerektiği Vurgusu Yapılmıştır.
+   * Bunun Sonucunda Görev Dağılımlarında Daha Fazla Aktif Olarak Destek Sağlayan Ekip Üyelerine Öncelik Sağlanması Gerektiğine Dikkat Çekilmiştir.
 
 
 
@@ -63,7 +78,8 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/83a986b2-19d1-432
 
 
 
-Sprint Review:
+
+
 
 
 
