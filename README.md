@@ -19,7 +19,7 @@ Unity Takım 78
 
 
 ## Product Backlog URL
-
+https://trello.com/b/BUbkaDBo/product-backlog
 
 ## Oyunun Hikayesi
 
