@@ -15,15 +15,36 @@ Unity Takım 78
 ⦁ Emre Armutluk ➼ Aktif Olmayan Takım Üyesi
 
 
-## Ürün İsmi
+## Oyunun İsmi
+
+ELARA: SHADOWS OF THE DARKWOOD
 
 
 ## Product Backlog URL
 
 https://trello.com/b/BUbkaDBo/product-backlog
 
+## Oyunun Konsepti
+
+Baş Karakter: Ok ve kılıç kullanan cesur bir kadın savaşçı, Elara.
+
+Tema: Karanlık bir ormanda geçen macera ve büyük bir arenada dev bir ejderha ile savaş.
+
+Hikaye: Ana karakter, küçük ejderhaları keserek yoluna devam ederken büyük bir arenada dev bir ejderha ile mücadele ederek önemli bir kişiyi kurtarmaya çalışır. Bu kişi, karakterin eski akıl hocası ve aynı zamanda ormanın koruyucusu, Elderion.
+
+Bulmacalar: Basit çevresel ve mantık bulmacaları.
+
+Diyalog Sistemi: Karakterler arası diyaloglar ile hikaye anlatımı.
+
 ## Oyunun Hikayesi
 
+*  Oyun, ana karakterin (Elara) çocukluğundan kalma bir anısıyla başlar. Akıl hocası (Elderion), ona ormanın korunması görevinin önemini anlatır. Bu sahnede oyuncular, karakterin 
+   motivasyonlarını ve hedeflerini öğrenirler.
+*  Elara, karanlık temalı bir ormanda ilerlerken küçük ejderhalar tarafından saldırıya uğrar. Yol boyunca, Elderion'un öğretilerini hatırlar ve ormanın eski huzurunu geri getirmek için 
+   savaşır.
+*  Elara, portalı kullanarak büyük arenaya ulaşır. Burada dev bir ejderha tarafından esir tutulan Elderion'u kurtarmak zorundadır.
+*  Arenaya girdiğinde, Elara dev ejderhanın kükremesiyle karşılaşır. Elderion bir kafeste tutsak edilmiştir ve ejderha, Elara'ya meydan okur.
+*  Ejderhayı yendikten sonra, Elara Elderion'u kurtarır. Elderion, Elara'ya ormanın korunması görevini yeniden devreder ve birlikte ormanın derinliklerine doğru yeni bir maceraya atılırlar.
 
 ## Oyunun Hedef Kitlesi
 
