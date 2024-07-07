@@ -41,8 +41,6 @@ https://trello.com/b/BUbkaDBo/product-backlog
 
 
 
-![Uploading images.jpg…]()
-
 
 
 
