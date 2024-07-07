@@ -1,1 +1,1 @@
-#Ürün ve Takım Hakkında Bilgi
+# Ürün ve Takım Hakkında Bilgi
