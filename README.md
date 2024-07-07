@@ -65,7 +65,7 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/83a986b2-19d1-432
    * Görev Dağılımları Belirlendi.
    * Oyunun İsmi, Hikayesi ve Teması Belirlendi.
    * Ana Karakter ve Düşmanlara Ait Assetler bulundu.
-   * Temel Mekanikler Geliştirilerek Karakterin Hareket Animasyonları ve Mekanikleri Eklenmiştir.
+   * Temel Mekanikler Geliştirilerek Karakterin Hareket Animasyonları ve Mekanikleri Eklendi.
    * Sahne Tasarımlarına başlanıldı.
 
 ➼ Sprint Retrospective:
