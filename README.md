@@ -58,7 +58,7 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/83a986b2-19d1-432
 
 ![WhatsApp Image 2024-07-07 at 22 04 38 (1)](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/cd87112f-b449-4106-89f0-6f69239ca63f)
 
-
+![WhatsApp Image 2024-07-07 at 22 04 38](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/378a816f-cfb3-4cc7-b41a-13f4e8f27685)
 
 ➼ Sprint Review:
 
