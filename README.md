@@ -47,7 +47,7 @@ https://trello.com/b/BUbkaDBo/product-backlog
 
 ➼ Tasarım ve Developing Kısmı: İlk sprintte görev ayrımı gözetmeksizin herkes yazılımla ilgilenmiştir.
 
-![Uploading Backlog.png…]()
+![Backlog](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/4e841485-9717-4610-9d69-3a0329bc8f2b)
 
 
 
