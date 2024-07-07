@@ -21,7 +21,7 @@ public class PlayerMove : Singleton<PlayerMove>
     private string verticalInput = "Vertical";
     private int jump = Animator.StringToHash("Jump");
     private Vector3 moveVector;
-    Vector3 rotOffset;
+    private Vector3 rotOffset;
 
     public bool isPlayerMoving = false;
 
@@ -53,18 +53,7 @@ public class PlayerMove : Singleton<PlayerMove>
     void Rotate()
     {
         if (moveVector != Vector3.zero)
-        {
-
-            rotOffset = ThirdPersonCamera.TransformDirection(moveVector);
-            rotOffset.y = 0;
-            
-            rotOffset.Normalize();
-
-            Quaternion rotTarget = Quaternion.LookRotation(rotOffset);
-            rotTarget.z = 0;    
-            rotTarget.Normalize();
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotTarget, Time.deltaTime * rotationSpeed);
-        }
+            Rotating(moveVector);
     }
     void Move()
     {
@@ -79,7 +68,7 @@ public class PlayerMove : Singleton<PlayerMove>
     }
 
 
-    void MovecClamp() => anim.SetFloat(Speed, 
+    void MovecClamp() => anim.SetFloat(Speed,
                 Vector3.ClampMagnitude(moveVector, 1).magnitude, maxLength, Time.deltaTime * 10);
 
     private void Gravity()
@@ -98,4 +87,20 @@ public class PlayerMove : Singleton<PlayerMove>
         moveVector.y = verticalVelocity;
     }
 
+    public void ShootTimeRotatetoLookingCamera() => Rotating(Vector3.forward);
+
+    void Rotating(Vector3 pos)
+    {
+        Vector3 cameraLookingPos = ThirdPersonCamera.TransformDirection(pos);
+
+        rotOffset = cameraLookingPos;
+        rotOffset.y = 0;
+
+        rotOffset.Normalize();
+
+        Quaternion rotTarget = Quaternion.LookRotation(rotOffset);
+        rotTarget.z = 0;
+        rotTarget.Normalize();
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotTarget, Time.deltaTime * rotationSpeed);
+    }
 }

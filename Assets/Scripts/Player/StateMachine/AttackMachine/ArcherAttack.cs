@@ -32,15 +32,14 @@ namespace AttackSystem
         {
             if (Input.GetMouseButtonDown(0))
             {
+                if (attack.archer.arrow != null)
+                {
+                    Debug.Log("arrow is here");
+                    //attack.archer.DestroyArrow();
+                    attack.AttackAnim.ResetTrigger(arrowlastFire);
+                }
                 if (!attack.isBowOnHandle)
                 {
-                    if(attack.archer.arrow != null)
-                    {
-                        Debug.Log("arrow is here");
-                        attack.archer.DestroyArrow();
-                        attack.AttackAnim.ResetTrigger(arrowlastFire);
-                    }
-
                     attack.AttackAnim.SetTrigger(getArrowTitle);
                 }
                 else
@@ -52,7 +51,10 @@ namespace AttackSystem
 
             }
             if (Input.GetMouseButton(0))
+            {
                 if (!first) return;
+                PlayerMove.Instance.ShootTimeRotatetoLookingCamera();
+            }
 
             if (Input.GetMouseButtonUp(0))
             {
@@ -69,9 +71,8 @@ namespace AttackSystem
                 }
                 else
                 {
-                    attack.AttackAnim.SetTrigger(arrowlastFire);
                     attack.archer.Shoot();
-
+                    attack.AttackAnim.SetTrigger(arrowlastFire);
                 }
             }
         }

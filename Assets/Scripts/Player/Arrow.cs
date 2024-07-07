@@ -8,12 +8,13 @@ namespace AttackSystem
         private Rigidbody rb;
         void Start() => rb = GetComponent<Rigidbody>();
 
-        public void Shoot(Transform player, Vector3 direction, float speed)
+        public void Shoot( Vector3 direction, float speed)
         {
             rb.isKinematic = false;
-            rb.velocity = direction.normalized * speed;
+            rb.velocity = direction * speed;
+            Debug.Log("Shoot " + direction);
 
-            Destroy(gameObject, 3f);
+            Destroy(gameObject, 6f);
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -23,9 +24,9 @@ namespace AttackSystem
                 if (collision.gameObject.GetComponent<Enemy>() != null)
                 {
 
-                    Debug.Log("Hit enemy");
+                    Debug.Log("Hit enemy " + collision.gameObject.name);
                     rb.isKinematic = true;
-                    rb.AddForce(Vector3.zero);
+                    rb.velocity = Vector3.zero;
 
 
                     ContactPoint contact = collision.contacts[0];

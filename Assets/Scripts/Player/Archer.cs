@@ -4,6 +4,7 @@ namespace AttackSystem
 {
     public class Archer : MonoBehaviour
     {
+        public float MaxDistance = 1000f;
         public GameObject Arrow;
         public Transform CreatArrowPoint;
         public Transform ArrowOnHand;
@@ -32,11 +33,10 @@ namespace AttackSystem
 
             Ray ray = ThirdPersonCamera.Instance.mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
 
-            if (Physics.Raycast(ray, out hit, 100f, maskEnemy))
+            if (Physics.Raycast(ray, out hit, MaxDistance, maskEnemy))
             {
-                Debug.Log(hit.transform.name);
 
-                arrow.GetComponent<Arrow>().Shoot(transform, hit.point - ArrowFirePoint.position, attackSpeed);
+                arrow.GetComponent<Arrow>().Shoot((hit.point - ArrowFirePoint.position), attackSpeed);
 
                 arrow.transform.SetParent(null);
             }
@@ -46,7 +46,10 @@ namespace AttackSystem
         public void ChangeArrowOnHand()
         {
             if (arrow == null)
+            {
+                Debug.Log("Arrow is null On Hand");
                 CreatArrow();
+            }
 
             arrow.transform.SetParent(ArrowOnHand);
 
@@ -69,7 +72,7 @@ namespace AttackSystem
         void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawRay(ArrowFirePoint.position, ArrowFirePoint.forward * 100f);
+            Gizmos.DrawRay(ArrowFirePoint.position, ArrowFirePoint.forward * MaxDistance);
         }
     }
 }
