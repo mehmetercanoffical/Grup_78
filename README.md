@@ -39,6 +39,18 @@ https://trello.com/b/BUbkaDBo/product-backlog
 
 # SPRINT 1 
 
+➼ Sprint içinde tamamlanması tahmin edilen puan: 33 Puan
+
+➼ Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 233 puanlık backlog bulunmaktadır. Üç sprint'e bölündüğünde ilk sprintte yetersiz vaktimizin bulunmasından kaynaklı olarak ilk sprint'in en az 33 puan ile başlaması gerektiğine karar verilmiştir ve hedefe ulaşılmıştır.
+
+➼ Daily Scrum: Daily Scrum toplantılarımız Whatsapp ve Discord uygulamalarından sağlanmıştır.
+
+➼ Tasarım ve Developing Kısmı: İlk sprintte görev ayrımı gözetmeksizin herkes yazılımla ilgilenmiştir.
+
+➼ Sprint Rewiev
+
+
+
 
 
 
