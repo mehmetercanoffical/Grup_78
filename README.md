@@ -67,6 +67,28 @@ Diyalog Sistemi: Karakterler arası diyaloglar ile hikaye anlatımı.
 
 ➼ Daily Scrum: Daily Scrum toplantılarımız Whatsapp ve Discord uygulamalarından sağlanmıştır.
 
+➼ Daily Scrum ScreenShot:
+
+![DailyScrum1](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/7bf3a8fb-e3d2-413e-8635-6a14bfffc16d)
+
+![DailyScrum2](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/32164643-97da-47a8-b4c3-89690bbd5263)
+
+![DailyScrum3](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/d77aad81-bba1-43fa-a66a-ed6d6eedf86d)
+
+![DailyScrum4](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d3e1c12-0ce6-4748-ba1b-b9592c291627)
+
+![DailyScrum5](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/2f09973f-ba40-448f-b3d4-073517875e94)
+
+![DailyScrum6](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/515c2a37-946d-4377-abb5-45e0a2dda3bb)
+
+![DailyScrum7](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/d7cea385-fbcf-4464-b5fb-4c9405b34e29)
+
+![DailyScrum8](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/2c5bd976-999e-4243-9d89-d3f36f694bb3)
+
+![DailyScrum9](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/0006170a-fd49-4c6c-9e0a-3e94046e509d)
+
+![DailyScrum10](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/434fae2a-3308-4663-8ea2-4391a41e053b)
+
 ➼ Tasarım ve Developing Kısmı: İlk sprintte görev ayrımı gözetmeksizin herkes yazılımla ilgilenmiştir.
 
 ➼ Sprint-1 Board Screenshot:
@@ -92,10 +114,13 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/cdaa2dc6-854d-476
    * Sahne Tasarımlarına başlanıldı.
 
 ➼ Sprint Retrospective:
-   * Bazı Teknik Aksaklıklar ve Bazı Görevlerin Yerine Getirilmemiş Olması Gerekçesiyle Ekip İçindeki Görev Dağılımıyla İlgili Düzenleme Yapılması Gerektiği Kararı Alınmıştır.
-   * Ekip İçerisindeki Üyelerin Aktiflik Durumları Yetersiz Olarak Görülmüş ve İletişim Konusunda Büyük Aksaklıkların Ortaya Çıktığı Tespit Edilmiştir ve Tüm Ekip Üyeleri Bu Noktada 
+   * Bazı Teknik Aksaklıklar ve Bazı Görevlerin Yerine Getirilmemiş Olması Gerekçesiyle Ekip İçindeki Görev Dağılımıyla 
+     İlgili Düzenleme Yapılması Gerektiği Kararı Alınmıştır.
+   * Ekip İçerisindeki Üyelerin Aktiflik Durumları Yetersiz Olarak Görülmüş ve İletişim Konusunda Büyük Aksaklıkların Ortaya 
+     Çıktığı Tespit Edilmiştir ve Tüm Ekip Üyeleri Bu Noktada 
      Uyarılarak Bir Sonraki Sprintte Aktil Olmaları Gerektiği Vurgusu Yapılmıştır.
-   * Bunun Sonucunda Görev Dağılımlarında Daha Fazla Aktif Olarak Destek Sağlayan Ekip Üyelerine Öncelik Sağlanması Gerektiğine Dikkat Çekilmiştir.
+   * Bunun Sonucunda Görev Dağılımlarında Daha Fazla Aktif Olarak Destek Sağlayan Ekip Üyelerine Öncelik Sağlanması 
+     Gerektiğine Dikkat Çekilmiştir.
 
 
 
