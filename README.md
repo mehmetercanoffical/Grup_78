@@ -95,9 +95,11 @@ Diyalog Sistemi: Karakterler arası diyaloglar ile hikaye anlatımı.
 
 ➼ Ürün Durumu Hakkında Ekran Görüntüleri: 
 
-https://github.com/mehmetercanoffical/Grup_78/assets/163590073/1961ba66-90ab-4b63-b4cd-a44ab7e3a4f6
+[https://github.com/mehmetercanoffical/Grup_78/assets/163590073/1961ba66-90ab-4b63-b4cd-a44ab7e3a4f6
 
-https://github.com/mehmetercanoffical/Grup_78/assets/163590073/cdaa2dc6-854d-4768-9793-ea0f66baa2ed
+https://github.com/mehmetercanoffical/Grup_78/assets/163590073/cdaa2dc6-854d-4768-9793-ea0f66baa2ed](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/3236e8b7-669c-4423-95fb-fc470d2b0e02
+
+https://github.com/mehmetercanoffical/Grup_78/assets/163590073/2fe178d3-3fa6-44f0-a4e6-b0f085ea0ab9)
 
 ![WhatsApp Image 2024-07-07 at 22 04 38 (1)](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/cd87112f-b449-4106-89f0-6f69239ca63f)
 
