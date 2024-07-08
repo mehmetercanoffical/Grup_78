@@ -97,7 +97,7 @@ Diyalog Sistemi: Karakterler arası diyaloglar ile hikaye anlatımı.
 
 https://github.com/mehmetercanoffical/Grup_78/assets/163590073/cdaa2dc6-854d-4768-9793-ea0f66baa2ed](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/3236e8b7-669c-4423-95fb-fc470d2b0e02
 
-
+https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e66-98dc-a32d96b9d5e5
 
 ![WhatsApp Image 2024-07-07 at 22 04 38 (1)](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/cd87112f-b449-4106-89f0-6f69239ca63f)
 
