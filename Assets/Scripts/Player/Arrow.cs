@@ -12,8 +12,6 @@ namespace AttackSystem
         {
             rb.isKinematic = false;
             rb.velocity = direction * speed;
-            Debug.Log("Shoot " + direction);
-
             Destroy(gameObject, 6f);
         }
 
@@ -24,10 +22,8 @@ namespace AttackSystem
                 if (collision.gameObject.GetComponent<Enemy>() != null)
                 {
 
-                    Debug.Log("Hit enemy " + collision.gameObject.name);
                     rb.isKinematic = true;
                     rb.velocity = Vector3.zero;
-
 
                     ContactPoint contact = collision.contacts[0];
                     Vector3 pos = contact.point.normalized;

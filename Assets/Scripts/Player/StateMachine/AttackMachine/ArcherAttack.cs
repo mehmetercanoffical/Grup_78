@@ -53,7 +53,7 @@ namespace AttackSystem
             if (Input.GetMouseButton(0))
             {
                 if (!first) return;
-                PlayerMove.Instance.ShootTimeRotatetoLookingCamera();
+                PlayerMove.Instance.CombatShootTimeRotatetoLookingCamera();
             }
 
             if (Input.GetMouseButtonUp(0))
