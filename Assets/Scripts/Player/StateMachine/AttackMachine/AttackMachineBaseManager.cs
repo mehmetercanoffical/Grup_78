@@ -4,9 +4,7 @@ namespace AttackSystem
 {
     public class AttackMachineBaseManager : MonoBehaviour
 {
-
     [Header("Animator")]
-
     public Animator AttackAnim;
     public AnimatorOverrideController SwordAttack;
     public AnimatorOverrideController BowAttack;
@@ -84,7 +82,6 @@ namespace AttackSystem
 
     public void DestroyArrow()
     {
-
         archer.DestroyArrow();
     }
 }

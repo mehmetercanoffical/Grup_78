@@ -87,7 +87,7 @@ public class PlayerMove : Singleton<PlayerMove>
         moveVector.y = verticalVelocity;
     }
 
-    public void ShootTimeRotatetoLookingCamera() => Rotating(Vector3.forward);
+    public void CombatShootTimeRotatetoLookingCamera() => Rotating(Vector3.forward);
 
     void Rotating(Vector3 pos)
     {
