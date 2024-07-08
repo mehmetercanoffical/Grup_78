@@ -71,12 +71,6 @@ Diyalog Sistemi: Karakterler arası diyaloglar ile hikaye anlatımı.
 
 ![DailyScrum1](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/7bf3a8fb-e3d2-413e-8635-6a14bfffc16d)
 
-
-
-![DailyScrum3](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/d77aad81-bba1-43fa-a66a-ed6d6eedf86d)
-
-
-
 ![DailyScrum5](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/2f09973f-ba40-448f-b3d4-073517875e94)
 
 ![DailyScrum6](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/515c2a37-946d-4377-abb5-45e0a2dda3bb)
