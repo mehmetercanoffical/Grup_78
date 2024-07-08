@@ -69,19 +69,7 @@ Diyalog Sistemi: Karakterler arası diyaloglar ile hikaye anlatımı.
 
 ➼ Daily Scrum ScreenShot:
 
-![DailyScrum1](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/7bf3a8fb-e3d2-413e-8635-6a14bfffc16d)
 
-![DailyScrum5](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/2f09973f-ba40-448f-b3d4-073517875e94)
-
-![DailyScrum6](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/515c2a37-946d-4377-abb5-45e0a2dda3bb)
-
-![DailyScrum7](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/d7cea385-fbcf-4464-b5fb-4c9405b34e29)
-
-![DailyScrum8](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/2c5bd976-999e-4243-9d89-d3f36f694bb3)
-
-![DailyScrum9](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/0006170a-fd49-4c6c-9e0a-3e94046e509d)
-
-![DailyScrum10](https://github.com/mehmetercanoffical/Grup_78/assets/163590073/434fae2a-3308-4663-8ea2-4391a41e053b)
 
 ➼ Tasarım ve Developing Kısmı: İlk sprintte görev ayrımı gözetmeksizin herkes yazılımla ilgilenmiştir.
 
