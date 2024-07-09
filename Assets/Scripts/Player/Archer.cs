@@ -12,7 +12,7 @@ namespace AttackSystem
         public float attackSpeed = 25f;
         public LayerMask maskEnemy;
 
-        public GameObject arrow;
+        internal GameObject arrow;
 
 
         private void Start() => CreatArrow();
