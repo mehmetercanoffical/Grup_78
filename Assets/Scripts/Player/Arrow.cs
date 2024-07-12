@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using NPCSpace;
 
 namespace AttackSystem
 {
@@ -19,7 +19,7 @@ namespace AttackSystem
         {
             if (collision != null)
             {
-                if (collision.gameObject.GetComponent<Enemy>() != null)
+                if (collision.gameObject.GetComponent<NPC>() != null)
                 {
 
                     rb.isKinematic = true;
