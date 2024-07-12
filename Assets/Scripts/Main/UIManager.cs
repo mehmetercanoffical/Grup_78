@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,34 +6,26 @@ using UnityEngine.UI;
 public class UIManager : Singleton<UIManager>
 {
 
-    [SerializeField] private GameObject DialogPanel;
-    [SerializeField] private GameObject DialogPlayerPanel;
+    public DialogUI dialogUI;
+    public Image healthBar;
+    public Color healthColor;
 
-    [SerializeField] private TextMeshProUGUI CharackterName;
-    [SerializeField] private TextMeshProUGUI TextDisplay;
-
-    [SerializeField] private Image NowSpeakIcon;
-    [SerializeField] private Sprite PlayerIcon;
-    [SerializeField] private Sprite NpcIcon;
-    [HideInInspector] public string npcName;
-    public string playerName;
-
-    private void Start() => SetText(string.Empty);
-
-    public void ShowDialog(bool isActive)
+    internal void UpdateHealthPlayer(float health)
     {
-        DialogPanel.SetActive(isActive);
-    }
-    public void SetText(string conversation)
-    {
-        TextDisplay.SetText(conversation);
-    }
-    public string GetText() => TextDisplay.text;
+        Debug.Log("Health: " + health);
 
-    public void SetNowSpeak(bool isPlayer)
-    {
-        NowSpeakIcon.sprite = isPlayer ? PlayerIcon : NpcIcon;
-        CharackterName.SetText(isPlayer ? playerName : npcName);
+        if (health <= 0)
+        {
+            Debug.Log("Player is dead");
+            return;
+        }
+
+
+        //healthBar.fillAmount = health;
+        //if (health < 30)
+        //    healthBar.color = Color.red;
+        //else
+        //    healthBar.color = healthColor;
 
     }
 }

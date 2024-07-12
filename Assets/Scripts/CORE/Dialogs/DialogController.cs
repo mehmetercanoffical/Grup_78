@@ -17,7 +17,7 @@ public class DialogController : Singleton<DialogController>
 
     public void SetTextOnUI(string text)
     {
-        UIManager.Instance.SetText(text);
+        DialogUI.Instance.SetText(text);
     }
 
 
@@ -25,15 +25,15 @@ public class DialogController : Singleton<DialogController>
     public void StartConversation(DialogsText[] conversation)
     {
         sentences = conversation;
-        UIManager.Instance.SetNowSpeak(sentences[index].isPlayer);
-        UIManager.Instance.ShowDialog(true);
+        DialogUI.Instance.SetNowSpeak(sentences[index].isPlayer);
+        DialogUI.Instance.ShowDialog(true);
         index = 0;
         StartCoroutine(Conversation());
     }
 
     public void Next()
     {
-        if (UIManager.Instance.GetText() == sentences[index].text) NextSentence();
+        if (DialogUI.Instance.GetText() == sentences[index].text) NextSentence();
         else
         {
             StopAllCoroutines();
@@ -45,7 +45,7 @@ public class DialogController : Singleton<DialogController>
 
         foreach (char i in sentences[index].text.ToCharArray())
         {
-            string getText = UIManager.Instance.GetText() + i.ToString();
+            string getText = DialogUI.Instance.GetText() + i.ToString();
             SetTextOnUI(getText);
             yield return new WaitForSeconds(typingSpeed);
         }
@@ -58,12 +58,12 @@ public class DialogController : Singleton<DialogController>
             index++;
             SetTextOnUI(string.Empty);
             Debug.Log(sentences[index].isPlayer);
-            UIManager.Instance.SetNowSpeak(sentences[index].isPlayer);
+            DialogUI.Instance.SetNowSpeak(sentences[index].isPlayer);
             StartCoroutine(Conversation());
         }
         else
         {
-            UIManager.Instance.ShowDialog(false);
+            DialogUI.Instance.ShowDialog(false);
             SetTextOnUI(string.Empty);
 
             index = 0;
@@ -72,7 +72,7 @@ public class DialogController : Singleton<DialogController>
 
     internal void Reset()
     {
-        UIManager.Instance.ShowDialog(false);
+        DialogUI.Instance.ShowDialog(false);
         SetTextOnUI(string.Empty);
         index = 0;
     }

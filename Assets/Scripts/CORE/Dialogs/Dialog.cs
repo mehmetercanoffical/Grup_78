@@ -9,9 +9,9 @@ public class Dialog : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //animator.SetBool("talk", true);
-            UIManager.Instance.npcName = dialogSO.npcName;
+            DialogUI.Instance.npcName = dialogSO.npcName;
             DialogController.Instance.StartConversation(dialogSO.dialogs);
-            Debug.Log(UIManager.Instance.npcName);
+            Debug.Log(DialogUI.Instance.npcName);
         }
     }
 

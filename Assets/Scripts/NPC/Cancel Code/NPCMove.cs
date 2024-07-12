@@ -24,7 +24,8 @@ namespace NPCSpace
             if (_dontMove) return;
             if (target == null)
             {
-                agent.destination = transform.position;   return;
+                agent.destination = transform.position;  
+                return;
             }
 
             if (!agent.pathPending)
