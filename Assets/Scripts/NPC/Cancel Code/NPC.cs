@@ -1,13 +1,10 @@
 using UnityEngine;
 namespace NPCSpace
 {
-    public class NPC : MonoBehaviour, ITakeDamage
+    public class NPC : MonoBehaviour
     {
         public NPCManager NPCManager;
-        public void Attack()
-        {
-            NPCManager.TakeDamage();
-        }
+        public WhoIsObject whoIsObject;
     }
 }
 

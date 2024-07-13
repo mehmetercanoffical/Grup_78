@@ -18,8 +18,7 @@ namespace AttackSystem
 
         public override void ExitState(AttackMachineBaseManager attack)
         {
-            if (attack.isBowOnHandle)
-                attack.AttackAnim.SetTrigger(disamArrowTitle);
+            if (attack.isBowOnHandle) attack.AttackAnim.SetTrigger(disamArrowTitle);
 
         }
         public override void UpdateState(AttackMachineBaseManager attack)
@@ -34,14 +33,11 @@ namespace AttackSystem
             {
                 if (attack.archer.arrow != null)
                 {
-                    Debug.Log("arrow is here");
-                    //attack.archer.DestroyArrow();
-                    attack.AttackAnim.ResetTrigger(arrowlastFire);
+                    attack.archer.DestroyArrow();
+                    //attack.AttackAnim.SetTrigger(arrowlastFire);
                 }
                 if (!attack.isBowOnHandle)
-                {
                     attack.AttackAnim.SetTrigger(getArrowTitle);
-                }
                 else
                 {
                     if (!first) return;
@@ -71,19 +67,17 @@ namespace AttackSystem
                 }
                 else
                 {
-                    attack.archer.Shoot();
+                    Debug.Log("arrow is fire");
                     attack.AttackAnim.SetTrigger(arrowlastFire);
+                    attack.archer.Shoot();
                 }
             }
         }
 
         void MouseOne()
         {
-            if (Input.GetMouseButton(1))
-                ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Combat);
-            else
-                ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Basic);
+            if (Input.GetMouseButton(1)) ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Combat);
+            else ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Basic);
         }
-
     }
 }

@@ -15,8 +15,6 @@ namespace AttackSystem
         internal GameObject arrow;
 
 
-        private void Start() => CreatArrow();
-
         public void CreatArrow()
         {
             arrow = Instantiate(Arrow, CreatArrowPoint.position, CreatArrowPoint.rotation, CreatArrowPoint);
@@ -31,14 +29,20 @@ namespace AttackSystem
 
             RaycastHit hit;
 
-            Ray ray = ThirdPersonCamera.Instance.mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+            Vector3 rayPos = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+            Ray ray = ThirdPersonCamera.Instance.mainCamera.ScreenPointToRay(rayPos);
 
             if (Physics.Raycast(ray, out hit, MaxDistance, maskEnemy))
             {
-
-                arrow.GetComponent<Arrow>().Shoot((hit.point - ArrowFirePoint.position), attackSpeed);
+                Debug.Log("Ray " + hit.transform.gameObject.name);
+                Vector3 hitAttackPoint = (hit.point - transform.position);
+                hitAttackPoint.Normalize();
+                Debug.DrawRay(ArrowFirePoint.position, hitAttackPoint * MaxDistance, Color.blue, 10f);
+                arrow.GetComponent<Arrow>().Shoot(hitAttackPoint, attackSpeed);
 
                 arrow.transform.SetParent(null);
+
+
             }
 
         }
@@ -71,7 +75,7 @@ namespace AttackSystem
 
         void OnDrawGizmos()
         {
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.green;
             Gizmos.DrawRay(ArrowFirePoint.position, ArrowFirePoint.forward * MaxDistance);
         }
     }

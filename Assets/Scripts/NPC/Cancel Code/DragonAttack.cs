@@ -10,7 +10,6 @@ public class DragonAttack : NPCAttackBase
     internal Transform _target;
     public float currentDistance;
 
-
     public void AttackTo(NPCManager manager, string attackName, float distance)
     {
         manager.isAttacking = true;
@@ -21,7 +20,6 @@ public class DragonAttack : NPCAttackBase
         currentDistance = distance;
     }
 
-
     public override void Start(NPCManager manager)
     {
 
@@ -31,8 +29,14 @@ public class DragonAttack : NPCAttackBase
         if (_target == null) return;
 
         float distance = Vector3.Distance(manager.transform.position, _target.position);
-        if (manager.isAttacking == true) return;
-        AttackTo(manager, manager._npcAttackSetting.attackName, distance);
+        if (manager.isAttacking == true)
+        {
+            Debug.Log("Ýs Attacking running");
+            return;
+        }
+        else
+            AttackTo(manager, manager._npcAttackSetting.attackName, distance);
+
 
     }
 

@@ -2,7 +2,6 @@ using NPCSpace;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 [Serializable]
 public class NPCAttackSettings
@@ -13,7 +12,6 @@ public class NPCAttackSettings
     public float distance;
 }
 
-
 [Serializable]
 public enum ATTACKTYPE
 {
@@ -22,7 +20,7 @@ public enum ATTACKTYPE
     NEAR,
     SONEAR,
 }
-public class NPCManager : MonoBehaviour
+public class NPCManager : MonoBehaviour, ITakeDamage
 {
     internal NPCAttackBase currentState;
     internal Animator anim;
@@ -42,7 +40,6 @@ public class NPCManager : MonoBehaviour
     private int _idle = Animator.StringToHash("Idle");
     private int _walk = Animator.StringToHash("Walk");
     private int _run = Animator.StringToHash("Run");
-
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -50,7 +47,6 @@ public class NPCManager : MonoBehaviour
         SetState(_inpcAttack.nPCAttackBase);
         _npcMove = GetComponent<NPCMove>();
     }
-
     void Update()
     {
         SearchAndWalk();
@@ -88,7 +84,6 @@ public class NPCManager : MonoBehaviour
             }
         }
     }
-
     private void checkDistanceForAttackType(float distance)
     {
         for (int i = 0; i < npcAttackSetting.Count; i++)
@@ -107,7 +102,6 @@ public class NPCManager : MonoBehaviour
         }
 
     }
-
     internal void SetState(NPCAttackBase state)
     {
 
@@ -145,14 +139,15 @@ public class NPCManager : MonoBehaviour
         }
     }
 
-    public void TakeDamage()
+    public void Attack(Transform target, float damage)
     {
         Health health = _targetPlayer.GetComponent<Health>();
         if (health != null)
         {
             health.health -= ((_npcAttackSetting.attackDamage) / 100f);
             health.health = Mathf.Max(0, Mathf.Min(1, health.health));
-            UIManager.Instance.UpdateHealthPlayer(health.health);
+            Debug.LogWarning("Attack " + health.health);
+            //UIManager.Instance.UpdateHealthPlayer(health.health);
         }
     }
 }
