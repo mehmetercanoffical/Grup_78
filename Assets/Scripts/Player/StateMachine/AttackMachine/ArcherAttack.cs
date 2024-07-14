@@ -29,6 +29,13 @@ namespace AttackSystem
 
         private void MouseZero(AttackMachineBaseManager attack)
         {
+            if (PlayerMove.Instance.isPlayerMoving)
+            {
+                attack.DestroyArrow();
+                return;
+            }
+
+
             if (Input.GetMouseButtonDown(0))
             {
                 if (attack.archer.arrow != null)

@@ -4,7 +4,6 @@ namespace NPCSpace
 {
     public class NPCMove : MonoBehaviour
     {
-
         public NavMeshAgent agent;
         public NPCManager manager;
         public bool _dontMove = false;

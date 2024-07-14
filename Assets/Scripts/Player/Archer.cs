@@ -4,12 +4,12 @@ namespace AttackSystem
 {
     public class Archer : MonoBehaviour
     {
+        public float attackSpeed = 25f;
         public float MaxDistance = 1000f;
         public GameObject Arrow;
         public Transform CreatArrowPoint;
         public Transform ArrowOnHand;
         public Transform ArrowFirePoint;
-        public float attackSpeed = 25f;
         public LayerMask maskEnemy;
 
         internal GameObject arrow;
@@ -37,13 +37,13 @@ namespace AttackSystem
                 Debug.Log("Ray " + hit.transform.gameObject.name);
                 Vector3 hitAttackPoint = (hit.point - transform.position);
                 hitAttackPoint.Normalize();
-                Debug.DrawRay(ArrowFirePoint.position, hitAttackPoint * MaxDistance, Color.blue, 10f);
-                arrow.GetComponent<Arrow>().Shoot(hitAttackPoint, attackSpeed);
 
+                Debug.DrawRay(transform.position, hitAttackPoint * MaxDistance, Color.blue, 10f);
+                arrow.GetComponent<Arrow>().Shoot(hitAttackPoint, hitAttackPoint.magnitude * attackSpeed);
                 arrow.transform.SetParent(null);
-
-
             }
+            else
+                DestroyArrow();
 
         }
 
@@ -69,6 +69,7 @@ namespace AttackSystem
 
         internal void DestroyArrow()
         {
+            if (arrow == null) return;
             Destroy(arrow);
             arrow = null;
         }

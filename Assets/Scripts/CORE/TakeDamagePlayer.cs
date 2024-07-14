@@ -19,10 +19,19 @@ public class TakeDamagePlayer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Collision " + collision.gameObject.name);
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Collision " + collision.gameObject.name);
             Attack(collision.transform, damage);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("other 2" + other.gameObject.name);
+            Attack(other.transform, damage);
         }
     }
 

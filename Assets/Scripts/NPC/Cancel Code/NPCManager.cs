@@ -28,17 +28,20 @@ public class NPCManager : MonoBehaviour, ITakeDamage
     public Transform _targetPlayer;
     internal NPCMove _npcMove;
 
+
     [Header("NPC Attack Settings")]
     public float maxDistanceOffset = 10;
     public float remainingDistance = 2;
+    public float attackWaitTime = 2;
     public bool isAttacking = false;
     public LayerMask playerLayers;
 
     public NPCAttackSettings _npcAttackSetting;
     public List<NPCAttackSettings> npcAttackSetting;
-    
+
     private int _idle = Animator.StringToHash("Idle");
     private int _walk = Animator.StringToHash("Walk");
+    private int _takeDamage = Animator.StringToHash("TakeDamage");
     private int _run = Animator.StringToHash("Run");
     private void Awake()
     {
@@ -70,14 +73,16 @@ public class NPCManager : MonoBehaviour, ITakeDamage
             }
             else
             {
-                if (isAttacking == false)
+                if (distance > remainingDistance)
                 {
+                    Debug.LogWarning("Walking");
                     isAttacking = false;
                     SetPos(players[0].transform, true);
                 }
+                else if (isAttacking) return;
                 else
                 {
-                    remainingDistance = _npcAttackSetting.distance;
+                    Debug.LogWarning("Attack Running");
                     anim.SetBool(_walk, false);
                 }
                 _npcMove.RotateToPlayer();
@@ -94,11 +99,15 @@ public class NPCManager : MonoBehaviour, ITakeDamage
                 if (npcAttackSetting[i].distance > distance && npcAttackSetting[i + 1].distance < distance)
                 {
                     _npcAttackSetting = npcAttackSetting[i];
+                    remainingDistance = _npcAttackSetting.distance;
                     break;
                 }
             }
             else
+            {
                 _npcAttackSetting = npcAttackSetting[i];
+                remainingDistance = _npcAttackSetting.distance;
+            }
         }
 
     }
@@ -144,10 +153,15 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         Health health = _targetPlayer.GetComponent<Health>();
         if (health != null)
         {
-            health.health -= ((_npcAttackSetting.attackDamage) / 100f);
-            health.health = Mathf.Max(0, Mathf.Min(1, health.health));
+            health.health -= ((_npcAttackSetting.attackDamage));
+            health.health = Mathf.Max(0, health.health);
             Debug.LogWarning("Attack " + health.health);
             //UIManager.Instance.UpdateHealthPlayer(health.health);
         }
+    }
+
+    internal void TakeDamage()
+    {
+        anim.SetTrigger(_takeDamage);
     }
 }
