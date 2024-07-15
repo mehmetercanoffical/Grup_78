@@ -4116,7 +4116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe8101874454d24e9a11e2afa20a4e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 10
+  attackSpeed: 50
   MaxDistance: 100
   Arrow: {fileID: 6283574765357327831, guid: 44a66456dc6391343bd47a52205ebf9e, type: 3}
   CreatArrowPoint: {fileID: 1005166804}
