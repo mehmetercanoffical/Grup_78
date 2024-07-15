@@ -15,6 +15,8 @@ namespace AttackSystem
         public ArcherAttack archerAttack = new ArcherAttack();
         public FreeAttack freeAttack = new FreeAttack();
 
+
+        private MainPlayerManager baseManager;
         [Header("Bow Attack")]
         public GameObject Bow;
         public Transform BowHandle;
@@ -31,11 +33,18 @@ namespace AttackSystem
         [HideInInspector] public bool isBowOnHandle = false;
 
 
-        void Start() => SetState(freeAttack);
+        void Start()
+        {
+            baseManager = GetComponent<MainPlayerManager>();
+            SetState(freeAttack);
+        }
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.E)) SetState(archerAttack);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SetState(archerAttack);
+            }
 
             if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -61,10 +70,15 @@ namespace AttackSystem
         public void GetSword()
         {
 
-            if (isSwordOnHandle) AttackObject(Sword, SwordBreak);
+            if (isSwordOnHandle)
+            {
+                AttackObject(Sword, SwordBreak);
+                baseManager.CollisionControl(false);
+            }
             else
             {
                 AttackObject(Sword, SwordHandle);
+                baseManager.CollisionControl(true);
                 UIManager.Instance.ArrowCursoure(false);
             }
 
@@ -77,11 +91,14 @@ namespace AttackSystem
             if (isBowOnHandle)
             {
                 UIManager.Instance.ArrowCursoure(false);
+                baseManager.CollisionControl(false);
+
                 AttackObject(Bow, BowBreak);
             }
             else
             {
                 AttackObject(Bow, BowHandle);
+                baseManager.CollisionControl(true);
                 UIManager.Instance.ArrowCursoure(true);
             }
             isBowOnHandle = !isBowOnHandle;

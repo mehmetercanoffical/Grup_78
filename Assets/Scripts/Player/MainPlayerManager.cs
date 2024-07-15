@@ -1,3 +1,4 @@
+using AttackSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,11 @@ using UnityEngine;
 public class MainPlayerManager : MonoBehaviour, ITakeDamage
 {
 
+    private AttackMachineBaseManager AttackMachineBase;
+    private void Awake()
+    {
+        AttackMachineBase = GetComponent<AttackMachineBaseManager>();
+    }
     public void Attack(Transform target, float damage)
     {
         Health health = target.GetComponent<Health>();
@@ -17,5 +23,10 @@ public class MainPlayerManager : MonoBehaviour, ITakeDamage
             if (health.health <= 0)
                 Debug.Log("Enemy is dead");
         }
+    }
+
+    public void CollisionControl(bool val)
+    {
+        GetComponent<Collider>().enabled = val;
     }
 }

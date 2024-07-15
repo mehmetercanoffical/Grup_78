@@ -20,24 +20,18 @@ namespace NPCSpace
         {
             RemainingDistance(manager.remainingDistance);
 
-            if (_dontMove) return;
-            if (target == null)
-            {
-                agent.destination = transform.position;  
-                return;
-            }
+            if (_dontMove || target == null) return;
 
-            if (!agent.pathPending)
-                agent.destination = target.position;
+            if (!agent.pathPending) agent.destination = target.position;
         }
 
         internal void RemainingDistance(float dis) => agent.stoppingDistance = dis;
 
-        internal void Stop(bool val) => agent.isStopped = val;
+        internal void Stop(bool val) => agent.isStopped = val;  
 
         internal void RotateToPlayer()
         {
-            if (_dontMove) return;
+            if (_dontMove || manager._targetPlayer == null) return;
             Vector3 direction = (manager._targetPlayer.position - transform.position).normalized;
             direction.y = 0;
             direction.Normalize();
@@ -47,7 +41,7 @@ namespace NPCSpace
 
         private void OnDrawGizmos()
         {
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.grey;
             Ray ray = new(transform.position, new Vector3(0,0, manager.remainingDistance));
             Gizmos.DrawRay(ray);
         }

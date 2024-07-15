@@ -55,16 +55,17 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         SearchAndWalk();
         currentState.Update(this);
     }
-
+    float distance;
     private void SearchAndWalk()
     {
         Collider[] players = Physics.OverlapSphere(transform.position, maxDistanceOffset, playerLayers);
 
         if (players.Length > 0)
         {
-            float distance = Vector3.Distance(transform.position, players[0].transform.position);
-
+            distance = Vector3.Distance(transform.position, players[0].transform.position);
             checkDistanceForAttackType(distance);
+
+            _npcMove.RotateToPlayer();
 
             if (distance > maxDistanceOffset)
             {
@@ -75,28 +76,35 @@ public class NPCManager : MonoBehaviour, ITakeDamage
             {
                 if (distance > remainingDistance)
                 {
-                    Debug.LogWarning("Walking");
                     isAttacking = false;
                     SetPos(players[0].transform, true);
+
                 }
-                else if (isAttacking) return;
+                else if (isAttacking)
+                {
+                    Debug.Log("Attack");
+                    return;
+                }
                 else
                 {
-                    Debug.LogWarning("Attack Running");
+                    isAttacking = true;
                     anim.SetBool(_walk, false);
+                    _npcMove.GoToPos(transform);
                 }
-                _npcMove.RotateToPlayer();
             }
         }
     }
-    private void checkDistanceForAttackType(float distance)
+    public void checkDistanceForAttackType(float distance)
     {
+
+
         for (int i = 0; i < npcAttackSetting.Count; i++)
         {
             int iPlus = i + 1;
             if (iPlus < npcAttackSetting.Count)
             {
-                if (npcAttackSetting[i].distance > distance && npcAttackSetting[i + 1].distance < distance)
+                if (npcAttackSetting[i].distance > distance &&
+                                        npcAttackSetting[i + 1].distance < distance)
                 {
                     _npcAttackSetting = npcAttackSetting[i];
                     remainingDistance = _npcAttackSetting.distance;
@@ -109,6 +117,11 @@ public class NPCManager : MonoBehaviour, ITakeDamage
                 remainingDistance = _npcAttackSetting.distance;
             }
         }
+
+
+        //int random = UnityEngine.Random.Range(0, npcAttackSetting.Count);
+        //_npcAttackSetting = npcAttackSetting[random];
+        //remainingDistance = _npcAttackSetting.distance;
 
     }
     internal void SetState(NPCAttackBase state)
@@ -127,7 +140,11 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         anim.SetBool(_walk, val);
         _npcMove.GoToPos(_targetPlayer);
     }
-    public void IsAttacing() => isAttacking = !isAttacking;
+    public void IsAttacing()
+    {
+        isAttacking = !isAttacking;
+
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
@@ -135,15 +152,10 @@ public class NPCManager : MonoBehaviour, ITakeDamage
 
         for (int i = 0; i < npcAttackSetting.Count; i++)
         {
-            if (npcAttackSetting[i].attackType == ATTACKTYPE.FLYFAR)
-                Gizmos.color = Color.blue;
-            else if (npcAttackSetting[i].attackType == ATTACKTYPE.FAR)
-                Gizmos.color = Color.red;
-            else if (npcAttackSetting[i].attackType == ATTACKTYPE.NEAR)
-                Gizmos.color = Color.yellow;
-            else if (npcAttackSetting[i].attackType == ATTACKTYPE.SONEAR)
-                Gizmos.color = Color.black;
-
+            if (npcAttackSetting[i].attackType == ATTACKTYPE.FLYFAR) Gizmos.color = Color.blue;
+            else if (npcAttackSetting[i].attackType == ATTACKTYPE.FAR) Gizmos.color = Color.red;
+            else if (npcAttackSetting[i].attackType == ATTACKTYPE.NEAR) Gizmos.color = Color.yellow;
+            else if (npcAttackSetting[i].attackType == ATTACKTYPE.SONEAR) Gizmos.color = Color.black;
             Gizmos.DrawWireSphere(transform.position, npcAttackSetting[i].distance);
         }
     }
@@ -155,13 +167,15 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         {
             health.health -= ((_npcAttackSetting.attackDamage));
             health.health = Mathf.Max(0, health.health);
-            Debug.LogWarning("Attack " + health.health);
+            Debug.LogWarning("Attacking to Player " + health.health);
             //UIManager.Instance.UpdateHealthPlayer(health.health);
         }
     }
 
-    internal void TakeDamage()
+    internal void TakeDamage() => anim.SetTrigger(_takeDamage);
+
+    public void CollisionControl(bool val)
     {
-        anim.SetTrigger(_takeDamage);
+
     }
 }

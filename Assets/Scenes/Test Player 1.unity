@@ -1346,7 +1346,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.3, y: 1.26, z: 0.26}
   m_Center: {x: -0.03799106, y: 0.80058306, z: 0.033562355}
@@ -1507,29 +1507,29 @@ MonoBehaviour:
   _targetPlayer: {fileID: 0}
   maxDistanceOffset: 14.3
   remainingDistance: 7.97
-  attackWaitTime: 1
+  attackWaitTime: 2.3
   isAttacking: 0
   playerLayers:
     serializedVersion: 2
     m_Bits: 128
   _npcAttackSetting:
     attackType: 0
-    attackName: 
+    attackName: FlyFar
     attackDamage: 0
     distance: 0
   npcAttackSetting:
   - attackType: 0
     attackName: FlyFar
     attackDamage: 5
-    distance: 3.67
+    distance: 2.9
   - attackType: 1
     attackName: Far
     attackDamage: 15
-    distance: 2.86
+    distance: 1.96
   - attackType: 2
     attackName: Near
     attackDamage: 20
-    distance: 1.24
+    distance: 1.26
   - attackType: 3
     attackName: Attack
     attackDamage: 20
@@ -4116,7 +4116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe8101874454d24e9a11e2afa20a4e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 100
+  attackSpeed: 10
   MaxDistance: 100
   Arrow: {fileID: 6283574765357327831, guid: 44a66456dc6391343bd47a52205ebf9e, type: 3}
   CreatArrowPoint: {fileID: 1005166804}
@@ -10455,7 +10455,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.36
-  m_Speed: 3
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -10480,7 +10480,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: d7006f4990225ff428c348c646653758, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

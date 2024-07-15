@@ -34,16 +34,23 @@ namespace AttackSystem
 
             if (Physics.Raycast(ray, out hit, MaxDistance, maskEnemy))
             {
-                Debug.Log("Ray " + hit.transform.gameObject.name);
-                Vector3 hitAttackPoint = (hit.point - transform.position);
-                hitAttackPoint.Normalize();
+                //Vector3 hitAttackPoint = (hit.point - transform.position);
+                //Vector3 hitAttackPoint2 = ( ArrowFirePoint.position + ArrowFirePoint.forward * MaxDistance - transform.position);
+                Vector3 hitAttackPoint3 = (hit.point - ArrowFirePoint.position);
+                hitAttackPoint3.Normalize();
 
-                Debug.DrawRay(transform.position, hitAttackPoint * MaxDistance, Color.blue, 10f);
-                arrow.GetComponent<Arrow>().Shoot(hitAttackPoint, hitAttackPoint.magnitude * attackSpeed);
+                Debug.DrawRay(transform.position, hitAttackPoint3 * attackSpeed, Color.blue, 15f);
+                arrow.GetComponent<Arrow>().Shoot(hitAttackPoint3, attackSpeed);
                 arrow.transform.SetParent(null);
             }
             else
-                DestroyArrow();
+            {
+                // if not hit enemy
+                Vector3 hitAttackPoint = (ArrowFirePoint.forward);
+                hitAttackPoint.Normalize();
+                arrow.GetComponent<Arrow>().Shoot(hitAttackPoint, hitAttackPoint.magnitude * attackSpeed);
+                arrow.transform.SetParent(null);
+            }
 
         }
 

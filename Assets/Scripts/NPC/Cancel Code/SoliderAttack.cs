@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SoliderAttack : NPCAttackBase
@@ -15,9 +13,9 @@ public class SoliderAttack : NPCAttackBase
 
     public void AttackTo(NPCManager manager, string attackName, float distance)
     {
-        manager.isAttacking = true;
         if (manager.isAttacking) manager.anim.SetTrigger(attackName);
         currentDistance = distance;
+        Debug.Log("Attacking");
     }
 
     public override void Start(NPCManager manager) => attackTime = manager.attackWaitTime;
@@ -27,19 +25,17 @@ public class SoliderAttack : NPCAttackBase
 
         float distance = Vector3.Distance(manager.transform.position, _target.position);
 
-        if (manager.isAttacking == true)
-            return;
-        else
+        if ((manager.isAttacking == true && distance <= manager.remainingDistance))
         {
             attackTime -= Time.deltaTime;
-            if (attackTime <= 0 && distance <= manager.remainingDistance)
+            if (attackTime <= 0)
             {
                 attackTime = manager.attackWaitTime;
                 AttackTo(manager, manager._npcAttackSetting.attackName, distance);
+
             }
         }
     }
-
 
     public override void SayBaseManager(NPCBaseManager basemanager)
     {

@@ -8,10 +8,11 @@ namespace AttackSystem
         private Rigidbody rb;
         void Start() => rb = GetComponent<Rigidbody>();
 
-        public void Shoot( Vector3 direction, float speed)
+        public void Shoot(Vector3 direction, float speed)
         {
             rb.isKinematic = false;
-            rb.velocity = direction * speed;
+            rb.AddForce(direction * speed, ForceMode.Impulse);
+            //rb.velocity = direction * speed;
 
         }
     }
