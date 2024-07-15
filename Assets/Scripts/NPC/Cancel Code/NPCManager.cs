@@ -34,10 +34,14 @@ public class NPCManager : MonoBehaviour, ITakeDamage
     public float remainingDistance = 2;
     public float attackWaitTime = 2;
     public bool isAttacking = false;
+    public bool isFirst = false;
     public LayerMask playerLayers;
+
+    float distance;
 
     public NPCAttackSettings _npcAttackSetting;
     public List<NPCAttackSettings> npcAttackSetting;
+    public List<NPCAttackSettings> npcAttackSettingBasic;
 
     private int _idle = Animator.StringToHash("Idle");
     private int _walk = Animator.StringToHash("Walk");
@@ -55,7 +59,7 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         SearchAndWalk();
         currentState.Update(this);
     }
-    float distance;
+
     private void SearchAndWalk()
     {
         Collider[] players = Physics.OverlapSphere(transform.position, maxDistanceOffset, playerLayers);
@@ -82,14 +86,17 @@ public class NPCManager : MonoBehaviour, ITakeDamage
                 }
                 else if (isAttacking)
                 {
-                    Debug.Log("Attack");
+                    Debug.Log("Attack");    
                     return;
                 }
                 else
                 {
                     isAttacking = true;
                     anim.SetBool(_walk, false);
-                    _npcMove.GoToPos(transform);
+                    if (!isFirst)
+                    {
+                        _npcMove.GoToPos(transform);
+                    }
                 }
             }
         }
@@ -98,22 +105,22 @@ public class NPCManager : MonoBehaviour, ITakeDamage
     {
 
 
-        for (int i = 0; i < npcAttackSetting.Count; i++)
+        for (int i = 0; i < npcAttackSettingBasic.Count; i++)
         {
             int iPlus = i + 1;
-            if (iPlus < npcAttackSetting.Count)
+            if (iPlus < npcAttackSettingBasic.Count)
             {
-                if (npcAttackSetting[i].distance > distance &&
-                                        npcAttackSetting[i + 1].distance < distance)
+                if (npcAttackSettingBasic[i].distance > distance &&
+                                        npcAttackSettingBasic[i + 1].distance < distance)
                 {
-                    _npcAttackSetting = npcAttackSetting[i];
+                    _npcAttackSetting = npcAttackSettingBasic[i];
                     remainingDistance = _npcAttackSetting.distance;
                     break;
                 }
             }
             else
             {
-                _npcAttackSetting = npcAttackSetting[i];
+                _npcAttackSetting = npcAttackSettingBasic[i];
                 remainingDistance = _npcAttackSetting.distance;
             }
         }
@@ -143,6 +150,7 @@ public class NPCManager : MonoBehaviour, ITakeDamage
     public void IsAttacing()
     {
         isAttacking = !isAttacking;
+        isFirst = true;
 
     }
     private void OnDrawGizmos()
@@ -150,13 +158,13 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, maxDistanceOffset);
 
-        for (int i = 0; i < npcAttackSetting.Count; i++)
+        for (int i = 0; i < npcAttackSettingBasic.Count; i++)
         {
-            if (npcAttackSetting[i].attackType == ATTACKTYPE.FLYFAR) Gizmos.color = Color.blue;
-            else if (npcAttackSetting[i].attackType == ATTACKTYPE.FAR) Gizmos.color = Color.red;
-            else if (npcAttackSetting[i].attackType == ATTACKTYPE.NEAR) Gizmos.color = Color.yellow;
-            else if (npcAttackSetting[i].attackType == ATTACKTYPE.SONEAR) Gizmos.color = Color.black;
-            Gizmos.DrawWireSphere(transform.position, npcAttackSetting[i].distance);
+            if (npcAttackSettingBasic[i].attackType == ATTACKTYPE.FLYFAR) Gizmos.color = Color.blue;
+            else if (npcAttackSettingBasic[i].attackType == ATTACKTYPE.FAR) Gizmos.color = Color.red;
+            else if (npcAttackSettingBasic[i].attackType == ATTACKTYPE.NEAR) Gizmos.color = Color.yellow;
+            else if (npcAttackSettingBasic[i].attackType == ATTACKTYPE.SONEAR) Gizmos.color = Color.black;
+            Gizmos.DrawWireSphere(transform.position, npcAttackSettingBasic[i].distance);
         }
     }
 

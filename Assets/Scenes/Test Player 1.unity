@@ -1507,8 +1507,9 @@ MonoBehaviour:
   _targetPlayer: {fileID: 0}
   maxDistanceOffset: 14.3
   remainingDistance: 7.97
-  attackWaitTime: 2.3
+  attackWaitTime: 1.5
   isAttacking: 0
+  isFirst: 0
   playerLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -1521,19 +1522,28 @@ MonoBehaviour:
   - attackType: 0
     attackName: FlyFar
     attackDamage: 5
-    distance: 2.9
+    distance: 4.22
   - attackType: 1
     attackName: Far
     attackDamage: 15
-    distance: 1.96
+    distance: 1.42
   - attackType: 2
     attackName: Near
     attackDamage: 20
-    distance: 1.26
+    distance: 1.1
   - attackType: 3
     attackName: Attack
     attackDamage: 20
-    distance: 0.54
+    distance: 0.72
+  npcAttackSettingBasic:
+  - attackType: 2
+    attackName: Near
+    attackDamage: 15
+    distance: 0.8
+  - attackType: 3
+    attackName: Attack
+    attackDamage: 5
+    distance: 0.5
 --- !u!114 &1471991643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1585,7 +1595,7 @@ MonoBehaviour:
   agent: {fileID: 1471991644}
   manager: {fileID: 1471991642}
   _dontMove: 0
-  rotationSpeed: 30
+  rotationSpeed: 70
 --- !u!114 &1471991646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1695,6 +1705,74 @@ Transform:
   - {fileID: 543450653457298486}
   m_Father: {fileID: 5742672708287666866}
   m_LocalEulerAnglesHint: {x: -5.934, y: -17.897, z: 76.982}
+--- !u!1001 &1605455864
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 44691451e760515499e1cf547b6972cd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -33.124683
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 44691451e760515499e1cf547b6972cd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.12051904
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 44691451e760515499e1cf547b6972cd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.3879871
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 44691451e760515499e1cf547b6972cd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 44691451e760515499e1cf547b6972cd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 44691451e760515499e1cf547b6972cd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 44691451e760515499e1cf547b6972cd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 44691451e760515499e1cf547b6972cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 44691451e760515499e1cf547b6972cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 44691451e760515499e1cf547b6972cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 44691451e760515499e1cf547b6972cd,
+        type: 3}
+      propertyPath: m_Name
+      value: SwordDemo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44691451e760515499e1cf547b6972cd, type: 3}
 --- !u!1 &1693245453
 GameObject:
   m_ObjectHideFlags: 0
@@ -9556,6 +9634,7 @@ MonoBehaviour:
   remainingDistance: 7.97
   attackWaitTime: 5
   isAttacking: 0
+  isFirst: 0
   playerLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -9581,6 +9660,7 @@ MonoBehaviour:
     attackName: Attack
     attackDamage: 20
     distance: 2.1
+  npcAttackSettingBasic: []
 --- !u!1 &5176368054702692595
 GameObject:
   m_ObjectHideFlags: 0
@@ -14820,3 +14900,4 @@ SceneRoots:
   - {fileID: 1738659429}
   - {fileID: 1507065956}
   - {fileID: 543450652261591230}
+  - {fileID: 1605455864}
