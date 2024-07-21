@@ -130,6 +130,17 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
 
      ➼ Ürün Durumu Hakkında Ekran Görüntüleri ve Ekran Kayıtları:
 
+     ![Tasarım1](https://github.com/user-attachments/assets/f5795a41-c7d4-4b4f-9f89-77b533730de1)
+     
+     ![Tasarım2](https://github.com/user-attachments/assets/d8cd9846-4af1-4ddb-943e-5003cc17a3ee)
+     
+     ![Tasarım3](https://github.com/user-attachments/assets/fab8e56d-f191-41ed-8199-05ac765f49b3)
+
+     https://github.com/user-attachments/assets/c9edc8f2-0fd6-4886-a56e-1ac784db5841
+
+     https://github.com/user-attachments/assets/b7c87eed-f04f-4876-acde-36c164d0bd4f
+
+
 
 
      ➼ Sprint Review:
