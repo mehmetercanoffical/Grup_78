@@ -36,13 +36,16 @@ Diyalog Sistemi: Karakterler arası diyaloglar ile hikaye anlatımı.
 
 ## Oyunun Hikayesi
 
-*  Oyun, ana karakterin (Elara) çocukluğundan kalma bir anısıyla başlar. Akıl hocası (Elderion), ona ormanın korunması görevinin önemini anlatır. Bu sahnede oyuncular, karakterin 
-   motivasyonlarını ve hedeflerini öğrenirler.
-*  Elara, karanlık temalı bir ormanda ilerlerken küçük ejderhalar tarafından saldırıya uğrar. Yol boyunca, Elderion'un öğretilerini hatırlar ve ormanın eski huzurunu geri getirmek için 
-   savaşır.
-*  Elara, portalı kullanarak büyük arenaya ulaşır. Burada dev bir ejderha tarafından esir tutulan Elderion'u kurtarmak zorundadır.
-*  Arenaya girdiğinde, Elara dev ejderhanın kükremesiyle karşılaşır. Elderion bir kafeste tutsak edilmiştir ve ejderha, Elara'ya meydan okur.
-*  Ejderhayı yendikten sonra, Elara Elderion'u kurtarır. Elderion, Elara'ya ormanın korunması görevini yeniden devreder ve birlikte ormanın derinliklerine doğru yeni bir maceraya atılırlar.
+  ●  Elara, sevdiği insanlar ile beraber, dünya da diğer canlıların göremeyeceği kadar gizli bir yerde mutlu yaşamaktadır. Fakat bir gün, Gandalf(Büyük 
+     Boss) adamları Elara’nın köyüne saldırır ve çok  sevdiği Thalia'yı kaçırırlar.  
+    
+  ● Elara, sevdiği insanı kurtarmak için yola çıkar. Karanlık temalı bir ormanda ilerlerken Gandalf’ın adamları ile savaşır. 
+
+  ● Elara, birçok geçitten, engellerden geçerek Gandalf bulunduğu arenaya ulaşır. Burada Gandalf tarafından esir tutulan Thalia kurtarmak zorundadır. 
+
+  ● Arenaya girdiğinde, Elara Gandalf’ın kükremesiyle karşılaşır. Thalia bir kafeste tutsak edilmiştir ve Gandalf, Elara'ya meydan okur. 
+
+  ● Elera Gandalf’ı yendikten sonra, Thalia kurtarır. Elera ve Thalia, köylerine dönerek tekrar eski köylerini inşa etmeye karar verirer.
 
 ## Oyunun Hedef Kitlesi
 
@@ -144,20 +147,6 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
      https://github.com/user-attachments/assets/c9edc8f2-0fd6-4886-a56e-1ac784db5841
 
      https://github.com/user-attachments/assets/b7c87eed-f04f-4876-acde-36c164d0bd4f
-
-     ## Oyunun Hikayesi
-     
-     ●  Elara, sevdiği insanlar ile beraber, dünya da diğer canlıların göremeyeceği kadar gizli bir yerde mutlu yaşamaktadır. Fakat bir gün, Gandalf(Büyük 
-     Boss) adamları Elara’nın köyüne saldırır ve çok  sevdiği Thalia'yı kaçırırlar.  
-    
-     ● Elara, sevdiği insanı kurtarmak için yola çıkar. Karanlık temalı bir ormanda ilerlerken Gandalf’ın adamları ile savaşır. 
-
-     ● Elara, birçok geçitten, engellerden geçerek Gandalf bulunduğu arenaya ulaşır. Burada Gandalf tarafından esir tutulan Thalia kurtarmak zorundadır. 
-
-     ● Arenaya girdiğinde, Elara Gandalf’ın kükremesiyle karşılaşır. Thalia bir kafeste tutsak edilmiştir ve Gandalf, Elara'ya meydan okur. 
-
-     ● Elera Gandalf’ı yendikten sonra, Thalia kurtarır. Elera ve Thalia, köylerine dönerek tekrar eski köylerini inşa etmeye karar verirer.
-
 
      ➼ Sprint Review:
        ● Oyunun hikayesi gözden geçirilip tekrardan revize edilmiştir.
