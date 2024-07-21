@@ -112,6 +112,8 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
    * Bunun Sonucunda Görev Dağılımlarında Daha Fazla Aktif Olarak Destek Sağlayan Ekip Üyelerine Öncelik Sağlanması 
      Gerektiğine Dikkat Çekilmiştir.
 
+     # SPRINT 2
+
 
 
 
