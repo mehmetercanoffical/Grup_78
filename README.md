@@ -114,6 +114,8 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
 
      # SPRINT 2
 
+     ➼ Sprint içinde tamamlanması tahmin edilen puan: 100 Puan
+
 
 
 
