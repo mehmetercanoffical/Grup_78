@@ -116,6 +116,37 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
 
      ➼ Sprint içinde tamamlanması tahmin edilen puan: 100 Puan
 
+     ➼ İkinci sprint'in en az 100 puan ile başlaması gerektiğine karar verilmiştir ve hedefe ulaşılmıştır.
+
+     ➼ Daily Scrum: Daily Scrum toplantılarımız Whatsapp ve Discord uygulamalarından devam etmiştir. Discord üzerinden ekip üyelerin müsaitlik durumuna göre haftada birkaç gün toplantılar yapılmıştır.
+
+     ➼ Daily Scrum ScreenShot:
+
+     ➼ Tasarım ve Developing Kısmı: İkinci sprintte görev ayrımı gözetmeksizin projeye katılım sağlayan herkes yazılımla ilgilenmiştir.
+
+     ➼ Sprint-1 Board Screenshot:
+
+
+
+     ➼ Ürün Durumu Hakkında Ekran Görüntüleri ve Ekran Kayıtları:
+
+
+
+     ➼ Sprint Review:
+       ● 
+       ● 
+       ● 
+       ● 
+       ● 
+
+
+
+      
+     
+     
+
+     
+
 
 
 
