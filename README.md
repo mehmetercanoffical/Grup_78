@@ -124,7 +124,7 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
 
      ➼ Tasarım ve Developing Kısmı: İkinci sprintte görev ayrımı gözetmeksizin projeye katılım sağlayan herkes yazılımla ilgilenmiştir.
 
-     ➼ Sprint-1 Board Screenshot:
+     ➼ Sprint-2 Board Screenshot:
 
 
 
