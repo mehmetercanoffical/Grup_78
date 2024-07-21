@@ -118,15 +118,20 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
 
      ➼ İkinci sprint'in en az 100 puan ile başlaması gerektiğine karar verilmiştir ve hedefe ulaşılmıştır.
 
-     ➼ Daily Scrum: Daily Scrum toplantılarımız Whatsapp ve Discord uygulamalarından devam etmiştir. Discord üzerinden ekip üyelerin müsaitlik durumuna göre haftada birkaç gün toplantılar yapılmıştır.
+     ➼ Daily Scrum: Daily Scrum toplantılarımız Whatsapp ve Discord uygulamalarından devam etmiştir. Discord üzerinden ekip üyelerin müsaitlik durumuna göre 
+     haftada birkaç gün toplantılar yapılmıştır.
 
      ➼ Daily Scrum ScreenShot:
+
+     ![DailyScrum1](https://github.com/user-attachments/assets/ba2ce04b-f05d-44db-bde6-2102b864964b)
+     
+     ![DailyScrum2](https://github.com/user-attachments/assets/ac86c4ac-4a7a-42dc-a8d4-bea3e5a81ba0)
 
      ➼ Tasarım ve Developing Kısmı: İkinci sprintte görev ayrımı gözetmeksizin projeye katılım sağlayan herkes yazılımla ilgilenmiştir.
 
      ➼ Sprint-2 Board Screenshot:
 
-
+     ![ProductBacklog](https://github.com/user-attachments/assets/e4413450-1c16-4ffb-8fd1-142eb7f4497c)
 
      ➼ Ürün Durumu Hakkında Ekran Görüntüleri ve Ekran Kayıtları:
 
@@ -140,15 +145,35 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
 
      https://github.com/user-attachments/assets/b7c87eed-f04f-4876-acde-36c164d0bd4f
 
+     ## Oyunun Hikayesi
+     
+     ●  Elara, sevdiği insanlar ile beraber, dünya da diğer canlıların göremeyeceği kadar gizli bir yerde mutlu yaşamaktadır. Fakat bir gün, Gandalf(Büyük 
+     Boss) adamları Elara’nın köyüne saldırır ve çok  sevdiği Thalia'yı kaçırırlar.  
+    
+     ● Elara, sevdiği insanı kurtarmak için yola çıkar. Karanlık temalı bir ormanda ilerlerken Gandalf’ın adamları ile savaşır. 
 
+     ● Elara, birçok geçitten, engellerden geçerek Gandalf bulunduğu arenaya ulaşır. Burada Gandalf tarafından esir tutulan Thalia kurtarmak zorundadır. 
+
+     ● Arenaya girdiğinde, Elara Gandalf’ın kükremesiyle karşılaşır. Thalia bir kafeste tutsak edilmiştir ve Gandalf, Elara'ya meydan okur. 
+
+     ● Elera Gandalf’ı yendikten sonra, Thalia kurtarır. Elera ve Thalia, köylerine dönerek tekrar eski köylerini inşa etmeye karar verirer.
 
 
      ➼ Sprint Review:
-       ● 
-       ● 
-       ● 
-       ● 
-       ● 
+       ● Oyunun hikayesi gözden geçirilip tekrardan revize edilmiştir.
+       ● Oyunda kullanılacak birçok ses dosyaları, assetler, modeller ve karakterler bulunmuştur.
+       ● Oyunun içeriğine göre oyunun ilk bölüm tasarımı tamamlanmıştır ve diğer bölüm tasarımlarının çalışmaları devam etmektedir.
+       ● Oyundan kullanılacak düşman karakterlerinin animasyonları tamamlanmıştır.
+       ● Kamera kontrolleri sağlanmıştır.
+       ● Dövüş sistemi (silah kullanımı, saldırı ve savunma mekanikleri) tamamlanmıştır.
+
+     ➼ Sprint Retrospective:
+       ● Görev dağıtımlarında verilen sorumluluklar kapsamında yerine getirilmeyen sorumluluklar neticesinde görevlendirmelere daha az kişi ile devam 
+         edilmesine karar verilmiştir.
+       ● Görev dağılımlarında görevler sadece aktif olarak destek sağlayan ekip üyelerine verilmesi kararı alınmıştır.
+     
+
+     
 
 
 
