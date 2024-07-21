@@ -107,11 +107,13 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
    * Sahne Tasarımlarına başlanıldı.
 
 ➼ Sprint Retrospective:
+
    * Bazı Teknik Aksaklıklar ve Bazı Görevlerin Yerine Getirilmemiş Olması Gerekçesiyle Ekip İçindeki Görev Dağılımıyla 
      İlgili Düzenleme Yapılması Gerektiği Kararı Alınmıştır.
+     
    * Ekip İçerisindeki Üyelerin Aktiflik Durumları Yetersiz Olarak Görülmüş ve İletişim Konusunda Büyük Aksaklıkların Ortaya 
-     Çıktığı Tespit Edilmiştir ve Tüm Ekip Üyeleri Bu Noktada 
-     Uyarılarak Bir Sonraki Sprintte Aktil Olmaları Gerektiği Vurgusu Yapılmıştır.
+     Çıktığı Tespit Edilmiştir ve Tüm Ekip Üyeleri Bu Noktada Uyarılarak Bir Sonraki Sprintte Aktil Olmaları Gerektiği Vurgusu Yapılmıştır.
+     
    * Bunun Sonucunda Görev Dağılımlarında Daha Fazla Aktif Olarak Destek Sağlayan Ekip Üyelerine Öncelik Sağlanması 
      Gerektiğine Dikkat Çekilmiştir.
 
@@ -149,16 +151,24 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
      https://github.com/user-attachments/assets/b7c87eed-f04f-4876-acde-36c164d0bd4f
 
      ➼ Sprint Review:
+     
        ● Oyunun hikayesi gözden geçirilip tekrardan revize edilmiştir.
+     
        ● Oyunda kullanılacak birçok ses dosyaları, assetler, modeller ve karakterler bulunmuştur.
+     
        ● Oyunun içeriğine göre oyunun ilk bölüm tasarımı tamamlanmıştır ve diğer bölüm tasarımlarının çalışmaları devam etmektedir.
+     
        ● Oyundan kullanılacak düşman karakterlerinin animasyonları tamamlanmıştır.
+     
        ● Kamera kontrolleri sağlanmıştır.
+     
        ● Dövüş sistemi (silah kullanımı, saldırı ve savunma mekanikleri) tamamlanmıştır.
 
      ➼ Sprint Retrospective:
+     
        ● Görev dağıtımlarında verilen sorumluluklar kapsamında yerine getirilmeyen sorumluluklar neticesinde görevlendirmelere daha az kişi ile devam 
          edilmesine karar verilmiştir.
+     
        ● Görev dağılımlarında görevler sadece aktif olarak destek sağlayan ekip üyelerine verilmesi kararı alınmıştır.
      
 
