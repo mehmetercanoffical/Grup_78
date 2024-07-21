@@ -45,7 +45,7 @@ Diyalog Sistemi: Karakterler arası diyaloglar ile hikaye anlatımı.
 
   ● Arenaya girdiğinde, Elara Gandalf’ın kükremesiyle karşılaşır. Thalia bir kafeste tutsak edilmiştir ve Gandalf, Elara'ya meydan okur. 
 
-  ● Elera Gandalf’ı yendikten sonra, Thalia kurtarır. Elera ve Thalia, köylerine dönerek tekrar eski köylerini inşa etmeye karar verirer.
+  ● Elara Gandalf’ı yendikten sonra, Thalia kurtarır. Elara ve Thalia, köylerine dönerek tekrar eski köylerini inşa etmeye karar verirer.
 
 ## Oyunun Hedef Kitlesi
 
