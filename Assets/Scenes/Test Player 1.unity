@@ -9554,7 +9554,7 @@ MonoBehaviour:
   _targetPlayer: {fileID: 0}
   maxDistanceOffset: 14.3
   remainingDistance: 7.97
-  attackWaitTime: 5
+  attackWaitTime: 1.2
   isAttacking: 0
   playerLayers:
     serializedVersion: 2
@@ -9581,6 +9581,26 @@ MonoBehaviour:
     attackName: Attack
     attackDamage: 20
     distance: 2.1
+<<<<<<< Updated upstream
+=======
+  npcAttackSettingBasic:
+  - attackType: 0
+    attackName: FlyFar
+    attackDamage: 5
+    distance: 11
+  - attackType: 1
+    attackName: Far
+    attackDamage: 15
+    distance: 7.32
+  - attackType: 2
+    attackName: Near
+    attackDamage: 20
+    distance: 3.24
+  - attackType: 3
+    attackName: Attack
+    attackDamage: 20
+    distance: 2.1
+>>>>>>> Stashed changes
 --- !u!1 &5176368054702692595
 GameObject:
   m_ObjectHideFlags: 0

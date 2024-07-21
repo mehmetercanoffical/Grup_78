@@ -34,6 +34,7 @@ public class NPCManager : MonoBehaviour, ITakeDamage
     public float remainingDistance = 2;
     public float attackWaitTime = 2;
     public bool isAttacking = false;
+    public bool isFirst = false;
     public LayerMask playerLayers;
 
     public NPCAttackSettings _npcAttackSetting;
@@ -56,6 +57,9 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         currentState.Update(this);
     }
     float distance;
+
+ 
+
     private void SearchAndWalk()
     {
         Collider[] players = Physics.OverlapSphere(transform.position, maxDistanceOffset, playerLayers);
