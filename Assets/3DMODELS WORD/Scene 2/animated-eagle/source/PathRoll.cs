@@ -1,0 +1,49 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PathRoll : MonoBehaviour
+{
+    public List<Transform> paths = new List<Transform>();
+    public float speed = 1;
+    public float rotationSpeed = 1;
+    public float reachDistance = 1.0f;
+    public int currentPath = 0;
+
+
+    private void Start()
+    {
+        transform.position = paths[currentPath].position;
+        transform.rotation = paths[currentPath].rotation;
+    }
+
+    private void Update()
+    {
+        float distance = Vector3.Distance(paths[currentPath].position, transform.position);
+
+        transform.position = Vector3.MoveTowards(transform.position, paths[currentPath].position, Time.deltaTime * speed);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, paths[currentPath].rotation, Time.deltaTime * rotationSpeed);
+
+        if (distance <= reachDistance)
+        {
+            currentPath++;
+            if (currentPath >= paths.Count)
+            {
+                currentPath = paths.Count - 1;
+            }
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        for (int i = 0; i < paths.Count; i++)
+        {
+            if (i + 1 < paths.Count)
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawLine(paths[i].position, paths[i + 1].position);
+            }
+        }
+    }
+}

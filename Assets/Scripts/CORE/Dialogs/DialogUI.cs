@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class DialogUI : Singleton<DialogUI>
 {
     public GameObject DialogPanel;
-    public GameObject DialogPlayerPanel;
 
     public TextMeshProUGUI CharackterName;
     public TextMeshProUGUI TextDisplay;

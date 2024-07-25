@@ -1,8 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/3DMODELS WORD/Scene 2/Supercyan Free Forest Sample/TerrainLayers/forestpack_moss_light_terrainlayer.terrainlayer.meta
 guid: b8bc1310bbf53544a889924a5126d8d7
+========
+guid: bb37e935cca327247aa85f512def0e6d
+>>>>>>>> Stashed changes:Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Materials/PT_Medieval_mat.mat.meta
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 8574412962073106934
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

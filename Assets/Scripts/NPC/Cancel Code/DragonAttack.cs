@@ -14,6 +14,7 @@ public class DragonAttack : NPCAttackBase
     public void AttackTo(NPCManager manager, string attackName, float distance)
     {
          manager.anim.SetTrigger(attackName);
+        if (manager.isAttacking) manager.anim.SetTrigger(attackName);
         currentDistance = distance;
         Debug.Log("Attacking");
     }

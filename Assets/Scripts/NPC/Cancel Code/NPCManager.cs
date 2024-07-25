@@ -3,23 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class NPCAttackSettings
-{
-    public ATTACKTYPE attackType;
-    public string attackName;
-    public float attackDamage;
-    public float distance;
-}
 
-[Serializable]
-public enum ATTACKTYPE
-{
-    FLYFAR,
-    FAR,
-    NEAR,
-    SONEAR,
-}
 public class NPCManager : MonoBehaviour, ITakeDamage
 {
     internal NPCAttackBase currentState;
@@ -50,6 +34,9 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         _inpcAttack = GetComponent<INPCManager>();
         SetState(_inpcAttack.nPCAttackBase);
         _npcMove = GetComponent<NPCMove>();
+
+        _npcAttackSetting = npcAttackSetting[0];
+        remainingDistance = _npcAttackSetting.distance;
     }
     void Update()
     {
@@ -85,10 +72,7 @@ public class NPCManager : MonoBehaviour, ITakeDamage
 
                 }
                 else if (isAttacking)
-                {
-                    Debug.Log("Attack");
                     return;
-                }
                 else
                 {
                     isAttacking = true;
@@ -121,12 +105,6 @@ public class NPCManager : MonoBehaviour, ITakeDamage
                 remainingDistance = _npcAttackSetting.distance;
             }
         }
-
-
-        //int random = UnityEngine.Random.Range(0, npcAttackSetting.Count);
-        //_npcAttackSetting = npcAttackSetting[random];
-        //remainingDistance = _npcAttackSetting.distance;
-
     }
     internal void SetState(NPCAttackBase state)
     {
@@ -182,4 +160,21 @@ public class NPCManager : MonoBehaviour, ITakeDamage
     {
 
     }
+}
+[Serializable]
+public class NPCAttackSettings
+{
+    public ATTACKTYPE attackType;
+    public string attackName;
+    public float attackDamage;
+    public float distance;
+}
+
+[Serializable]
+public enum ATTACKTYPE
+{
+    FLYFAR,
+    FAR,
+    NEAR,
+    SONEAR,
 }

@@ -12,14 +12,14 @@ public class DragonManager : MonoBehaviour, INPCManager
 {
     public DragonAttack dragon = new();
     private NPCManager _npcManager;
-    public AnimatorOverrideController animOv;
+    public RuntimeAnimatorController animOv;
     private Transform target;
 
 
     void Start()
     {
         _npcManager = GetComponent<NPCManager>();
-        _npcManager.anim.runtimeAnimatorController = animOv.runtimeAnimatorController;
+        _npcManager.anim.runtimeAnimatorController = animOv;
         _npcManager.SetState(dragon);
         //_npcManager._npcMove.RemainingDistance();
     }
