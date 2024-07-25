@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Scenes/NewLayer 1.terrainlayer.meta
 guid: 33b6323cdea133041a53a34966c52f3c
+========
+guid: f7ce30ec9b280b34cacb1a1005349890
+>>>>>>>> Stashed changes:Assets/Polytope Studio/Lowpoly_Demos/Environment_Free/Helpers/Ground_Layer_02.terrainlayer.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 8574412962073106934
