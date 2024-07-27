@@ -48,29 +48,12 @@ public class ThirdPersonCamera : Singleton<ThirdPersonCamera>
 
         yRotation += mouseX;
 
-
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
 
-        // Position the camera behind the player
         Vector3 desiredPosition = Player.position 
                     + transform.rotation *
                         (currentStyle == CameraStyle.Basic ? MainCameraOffset : CombatCameraOffset);
 
-
-        if (currentStyle == CameraStyle.Combat)
-        {
-            // always behind player combatY 
-            // behind Player Y 
-            //Vector3 behindPos = desiredPosition - transform.position;
-            //if (Vector3.Dot(desiredPosition, Player.forward) > 0)
-            //{
-            //    behindPos = Player.forward * behindPos.magnitude;
-            //    combatYClamp.x = behindPos.y - 30;
-            //    combatYClamp.y = behindPos.y + 30;
-            //    yRotation = Mathf.Clamp(yRotation, combatYClamp.x, combatYClamp.y);
-            //}
-
-        }
         transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
 
 
@@ -96,7 +79,6 @@ public class ThirdPersonCamera : Singleton<ThirdPersonCamera>
         {
             transform.position = Vector3.Lerp(startPos, endPos, elapsedTime);
             elapsedTime = Time.deltaTime * speed;
-
             yield return null;
         }
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 using static ThirdPersonCamera;
 
 namespace AttackSystem
@@ -10,6 +11,7 @@ namespace AttackSystem
         private int drawArrowTitle = Animator.StringToHash("drawArrow");
         private int getArrowTitle = Animator.StringToHash("getArrow");
         bool first = false;
+        
 
         public override void EnterState(AttackMachineBaseManager attack)
         {
@@ -74,17 +76,27 @@ namespace AttackSystem
                 }
                 else
                 {
-                    Debug.Log("arrow is fire");
                     attack.AttackAnim.SetTrigger(arrowlastFire);
                     attack.archer.Shoot();
                 }
+
+
             }
         }
 
         void MouseOne()
         {
-            if (Input.GetMouseButton(1)) ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Combat);
-            else ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Basic);
+            if (Input.GetMouseButton(1))
+            {
+                ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Combat);
+
+                //UIManager.Instance.ChangeCursor(false);
+            }
+            else
+            {
+                ThirdPersonCamera.Instance.SwitchCameraStyle(CameraStyle.Basic);
+                //UIManager.Instance.ChangeCursor(true);
+            }
         }
     }
 }

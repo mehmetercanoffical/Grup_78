@@ -11,7 +11,7 @@ public class Dialog : MonoBehaviour
             //animator.SetBool("talk", true);
             DialogUI.Instance.npcName = dialogSO.npcName;
             DialogController.Instance.StartConversation(dialogSO.dialogs);
-            Debug.Log(DialogUI.Instance.npcName);
+            animator.SetTrigger("Talk");    
         }
     }
 
@@ -30,6 +30,8 @@ public class Dialog : MonoBehaviour
         {
             //animator.SetBool("talk", false);
             DialogController.Instance.Reset();
+            DialogUI.Instance.ShowDialog(false);
+            animator.SetTrigger("Idle");
         }
     }
 }

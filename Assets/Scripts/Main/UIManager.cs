@@ -11,25 +11,37 @@ public class UIManager : Singleton<UIManager>
     public Color healthColor;
 
     public GameObject ArrowCursour;
+    public Image cursour;
+    public Sprite cursourFirst;
+    public Sprite cursourAir;
 
-    public void ArrowCursoure(bool val) => ArrowCursour.SetActive(val);
+
+    public void ChangeCursor(bool isFirst)
+    {
+        if (isFirst)
+            cursour.sprite = cursourFirst;
+        else
+            cursour.sprite = cursourAir;
+    }
+
+
+    public void ArrowCursoure(bool val)
+    {
+        ArrowCursour.SetActive(val);
+        ChangeCursor(true);
+    }
 
     internal void UpdateHealthPlayer(float health)
     {
-        Debug.Log("Health: " + health);
 
-        if (health <= 0)
+
+        healthBar.fillAmount = health;
+
+        if (healthBar.fillAmount <= 0)
         {
             Debug.Log("Player is dead");
             return;
         }
-
-
-        //healthBar.fillAmount = health;
-        //if (health < 30)
-        //    healthBar.color = Color.red;
-        //else
-        //    healthBar.color = healthColor;
 
     }
 }

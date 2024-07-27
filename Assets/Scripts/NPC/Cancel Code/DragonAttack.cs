@@ -13,9 +13,10 @@ public class DragonAttack : NPCAttackBase
 
     public void AttackTo(NPCManager manager, string attackName, float distance)
     {
-        manager.isAttacking = true;
+         manager.anim.SetTrigger(attackName);
         if (manager.isAttacking) manager.anim.SetTrigger(attackName);
         currentDistance = distance;
+        Debug.Log("Attacking");
     }
 
     public override void Start(NPCManager manager) => attackTime = manager.attackWaitTime;
@@ -24,19 +25,18 @@ public class DragonAttack : NPCAttackBase
         if (_target == null) return;
 
         float distance = Vector3.Distance(manager.transform.position, _target.position);
-        if (manager.isAttacking == true)
-            return;
-        else
+
+        if ((manager.isAttacking == true && distance <= manager.remainingDistance))
         {
             attackTime -= Time.deltaTime;
             if (attackTime <= 0)
             {
                 attackTime = manager.attackWaitTime;
                 AttackTo(manager, manager._npcAttackSetting.attackName, distance);
+
             }
         }
     }
-
 
     public override void SayBaseManager(NPCBaseManager basemanager)
     {
@@ -53,4 +53,5 @@ public class DragonAttack : NPCAttackBase
     {
 
     }
+
 }

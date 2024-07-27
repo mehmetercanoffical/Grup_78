@@ -13,7 +13,7 @@ public class SoliderAttack : NPCAttackBase
 
     public void AttackTo(NPCManager manager, string attackName, float distance)
     {
-        if (manager.isAttacking) manager.anim.SetTrigger(attackName);
+        manager.anim.SetTrigger(attackName);
         currentDistance = distance;
         Debug.Log("Attacking");
     }
@@ -39,7 +39,7 @@ public class SoliderAttack : NPCAttackBase
 
     public override void SayBaseManager(NPCBaseManager basemanager)
     {
-        // I am die you should know
+
 
     }
 
