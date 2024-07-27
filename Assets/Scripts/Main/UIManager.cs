@@ -33,9 +33,11 @@ public class UIManager : Singleton<UIManager>
 
     internal void UpdateHealthPlayer(float health)
     {
-        Debug.Log("Health: " + health);
 
-        if (health <= 0)
+
+        healthBar.fillAmount = health;
+
+        if (healthBar.fillAmount <= 0)
         {
             Debug.Log("Player is dead");
             return;

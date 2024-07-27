@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 451516}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperArm_L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 494034}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingClaw3_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 422164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperHead2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 436268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperHead1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 405648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 461940}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wing3_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 437978}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail10_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 447744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 468390}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hand_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 444430}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Neck4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492498}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wing4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 475524}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail10_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 457804}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Finger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479504}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Neck2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 477282}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingClaw1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 416376}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail8_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 498922}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Neck1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 430342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toe2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,7 +620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400502}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Finger2_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 458242}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail8_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 485970}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jaw2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -714,7 +714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483692}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jaw1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -746,7 +746,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 473440}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail4_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -777,7 +777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479066}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 452840}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail7_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +841,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 494188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toe1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,9 +881,9 @@ GameObject:
   - component: {fileID: 1742144487679677101}
   - component: {fileID: 8479123198980708692}
   - component: {fileID: 8710642403565323926}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Green
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -898,7 +898,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.053494874, z: 0, w: 0.9985682}
   m_LocalPosition: {x: 0, y: 0, z: 0.49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4461, y: 0.4461, z: 0.4461}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 476846}
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetPlayer: {fileID: 0}
-  maxDistanceOffset: 10
+  maxDistanceOffset: 23.67
   remainingDistance: 2
   attackWaitTime: 2
   isAttacking: 0
@@ -954,7 +954,7 @@ MonoBehaviour:
     distance: 0
   npcAttackSetting:
   - attackType: 0
-    attackName: Flyfar
+    attackName: FlyFar
     attackDamage: 20
     distance: 10
   - attackType: 1
@@ -1091,7 +1091,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 444580}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Feet_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1123,7 +1123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 429086}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1155,7 +1155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 436812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Finger1_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1187,7 +1187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 455154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail13_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1218,7 +1218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 438572}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail12_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1250,7 +1250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 448444}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1282,7 +1282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail11_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1313,7 +1313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 471676}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1345,7 +1345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 478422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail6_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1377,7 +1377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 427510}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1410,7 +1410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 414012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail7_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1442,7 +1442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 484856}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail11_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1474,7 +1474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 476846}
   - component: {fileID: 13735348}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DragonMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1641,7 +1641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 440318}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wing1_L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1673,7 +1673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 468854}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingClaw2_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1704,7 +1704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492768}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerLeg_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1736,7 +1736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 464332}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wing4_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1770,7 +1770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 477684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Finger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1801,7 +1801,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490994}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail3_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1833,7 +1833,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 448154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jaw3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1864,7 +1864,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 476094}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1896,7 +1896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 455282}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail2_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1928,7 +1928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 469738}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wing2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1961,7 +1961,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 401724}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1996,7 +1996,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 477838}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerLeg2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2028,7 +2028,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 444786}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2060,7 +2060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 415892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerLeg2_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2092,7 +2092,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 465438}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail12_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2124,7 +2124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 431626}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail1_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2156,7 +2156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 410256}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingClaw4_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2187,7 +2187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 463116}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingClaw1_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2219,7 +2219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492674}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail9_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2251,7 +2251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 445936}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2282,7 +2282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 417494}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerArm_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2314,7 +2314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 404288}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail13_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2345,7 +2345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 484560}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Neck3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2377,7 +2377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479058}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail9_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2409,7 +2409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 498604}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail5_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2441,7 +2441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 450678}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingClaw4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2472,7 +2472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483816}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wing2_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2505,7 +2505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467272}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2537,7 +2537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 410870}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2569,7 +2569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 425612}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2601,7 +2601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 490626}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail5_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2633,7 +2633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483480}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingClaw3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2665,7 +2665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 488848}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wing3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2699,7 +2699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 460296}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingDetail6_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2731,7 +2731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 458396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2765,7 +2765,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 457794}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2797,7 +2797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 498550}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wing1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2829,7 +2829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 480506}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LowerLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2861,7 +2861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 420498}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toe1_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2893,7 +2893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479606}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hand_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2925,7 +2925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 428592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WingClaw2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2956,7 +2956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 449476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Toe2_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2987,7 +2987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 433224}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperLeg_L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3019,7 +3019,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 418080}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Feet_L 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

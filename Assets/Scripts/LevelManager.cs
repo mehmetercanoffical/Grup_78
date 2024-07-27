@@ -10,7 +10,7 @@ public class LevelManager : Singleton<LevelManager>
     public GameObject LoadingBar;
 
     [Header("Test or Edit Settings")]
-    public bool start = false;
+    public bool DontStart = false;
 
     [Header("Settings")]
     public int currentLevel = 1;
@@ -19,7 +19,9 @@ public class LevelManager : Singleton<LevelManager>
 
     private void Awake()
     {
-            SceneLoader("Scene" + currentLevel.ToString());
+        if (DontStart)
+            return;
+        SceneLoader("Scene" + currentLevel.ToString());
     }
 
 
@@ -61,7 +63,8 @@ public class LevelManager : Singleton<LevelManager>
 
 
         OnLevelLoaded?.Invoke(true);
-        LoadingBar.SetActive(false);
+        if (LoadingBar != null)
+            LoadingBar?.SetActive(false);
 
     }
 

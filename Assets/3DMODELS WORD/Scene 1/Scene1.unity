@@ -480,7 +480,7 @@ MonoBehaviour:
   - {fileID: 394325395}
   - {fileID: 1711320933}
   - {fileID: 1898565993}
-  speed: 3.5
+  speed: 5
   rotationSpeed: 0.1
   reachDistance: 1
   currentPath: 0

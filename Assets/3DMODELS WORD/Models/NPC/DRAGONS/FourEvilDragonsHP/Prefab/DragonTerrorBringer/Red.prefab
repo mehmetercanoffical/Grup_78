@@ -98,7 +98,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.053494874, z: 0, w: 0.9985682}
   m_LocalPosition: {x: 0, y: 0, z: 0.49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.72305, y: 0.72305, z: 0.72305}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 414830}
@@ -168,7 +168,7 @@ MonoBehaviour:
     distance: 0
   npcAttackSetting:
   - attackType: 0
-    attackName: Flyfar
+    attackName: FlyFar
     attackDamage: 20
     distance: 10
   - attackType: 1
