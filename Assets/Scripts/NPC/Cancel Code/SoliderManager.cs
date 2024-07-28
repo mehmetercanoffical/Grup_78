@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SoliderManager : MonoBehaviour, INPCManager
@@ -16,7 +14,6 @@ public class SoliderManager : MonoBehaviour, INPCManager
         _npcManager = GetComponent<NPCManager>();
         anim.runtimeAnimatorController = animOve;
         _npcManager.SetState(dragon);
-        //_npcManager._npcMove.RemainingDistance();
     }
 
 

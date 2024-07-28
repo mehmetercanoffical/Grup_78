@@ -1,8 +1,34 @@
 using NPCSpace;
 using System;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
+
+[Serializable]
+public class NPCAttackSettings
+{
+    public ATTACKTYPE attackType;
+    public string attackName;
+    public float attackDamage;
+    public float distance;
+}
+
+[Serializable]
+public enum ATTACKTYPE
+{
+    FLYFAR,
+    FAR,
+    NEAR,
+    SONEAR,
+}
+[Serializable]
+
+public enum NPCS
+{
+    DRAGON,
+    SOLIDER,
+    TROLL,
+    DRAGON_BOSS,
+}
 
 
 public class NPCManager : MonoBehaviour, ITakeDamage
@@ -12,26 +38,34 @@ public class NPCManager : MonoBehaviour, ITakeDamage
     private INPCManager _inpcAttack;
     public Transform _targetPlayer;
     internal NPCMove _npcMove;
-
+    public NPCS nPCS;
 
     [Header("NPC Attack Settings")]
     public float maxDistanceOffset = 10;
     public float remainingDistance = 2;
     public float attackWaitTime = 2;
     public float ChangeAttackByTime = 3;
-    private float changeAttackByTime = 3;
+    private float _changeAttackByTime = 3;
     public bool isAttacking = false;
     public bool isFirst = false;
-    public LayerMask playerLayers;
+    public bool isDead = false;
+    private float _distance;
+    public LayerMask playerLayers; //Target Layer
 
     public NPCAttackSettings _npcAttackSetting;
     public List<NPCAttackSettings> npcAttackSetting;
+    public ParticleSystem Fire;
 
+    [Header("NPC Animation")]
     private int _idle = Animator.StringToHash("Idle");
     private int _walk = Animator.StringToHash("Walk");
     private int _takeDamage = Animator.StringToHash("TakeDamage");
     private int _run = Animator.StringToHash("Run");
-    public ParticleSystem Fire;
+    private int _die = Animator.StringToHash("Die");
+
+
+    [Header("NPC SOLIDER")]
+    public GameObject DeactiveSwordTakeDamage;
 
 
     public void FireStart()
@@ -59,12 +93,10 @@ public class NPCManager : MonoBehaviour, ITakeDamage
     }
     void Update()
     {
+        if (isDead) return;
         SearchAndWalk();
         currentState.Update(this);
     }
-
-    float distance;
-
 
 
     private void SearchAndWalk()
@@ -73,19 +105,19 @@ public class NPCManager : MonoBehaviour, ITakeDamage
 
         if (players.Length > 0)
         {
-            distance = Vector3.Distance(transform.position, players[0].transform.position);
-            checkDistanceForAttackType(distance);
+            _distance = Vector3.Distance(transform.position, players[0].transform.position);
+            checkDistanceForAttackType(_distance);
 
             _npcMove.RotateToPlayer();
 
-            if (distance > maxDistanceOffset)
+            if (_distance > maxDistanceOffset)
             {
                 SetPos(null, false);
                 isAttacking = false;
             }
             else
             {
-                if (distance > remainingDistance)
+                if (_distance > remainingDistance)
                 {
                     isAttacking = false;
                     SetPos(players[0].transform, true);
@@ -99,6 +131,8 @@ public class NPCManager : MonoBehaviour, ITakeDamage
                     anim.SetBool(_walk, false);
                     _npcMove.GoToPos(transform);
                 }
+
+
             }
         }
     }
@@ -109,25 +143,27 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         {
             _npcAttackSetting = npcAttackSetting[0];
             remainingDistance = _npcAttackSetting.distance;
-            changeAttackByTime = ChangeAttackByTime;
+            _changeAttackByTime = ChangeAttackByTime;
         }
         else
         {
-            if (changeAttackByTime < 0 && !isAttacking)
+            if (_changeAttackByTime < 0 && !isAttacking)
             {
                 int random = UnityEngine.Random.Range(1, npcAttackSetting.Count);
                 _npcAttackSetting = npcAttackSetting[random];
                 remainingDistance = _npcAttackSetting.distance;
-                changeAttackByTime = ChangeAttackByTime;
+                _changeAttackByTime = ChangeAttackByTime;
             }
-
-            changeAttackByTime -= Time.deltaTime;
+            _changeAttackByTime -= Time.deltaTime;
         }
 
+        if (_npcAttackSetting.attackName == "Attack" && nPCS == NPCS.SOLIDER)
+            DeactiveSwordTakeDamage.SetActive(false);
+        else if (nPCS == NPCS.SOLIDER)
+            DeactiveSwordTakeDamage.SetActive(true);
 
-
+        // With Distance 
         //for (int i = 0; i < npcAttackSetting.Count; i++)
-        //{
         //    int iPlus = i + 1;
         //    if (iPlus < npcAttackSetting.Count)
         //    {
@@ -156,7 +192,7 @@ public class NPCManager : MonoBehaviour, ITakeDamage
 
         currentState?.Exit(this);
         currentState = state;
-        gameObject.name = "Enemy - " + state.GetType().Name;
+        gameObject.name = "Enemy - " + gameObject.name + " - " + state.GetType().Name;
         currentState?.Start(this);
     }
     private void SetPos(Transform TargetPos, bool val)
@@ -166,11 +202,8 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         anim.SetBool(_walk, val);
         _npcMove.GoToPos(_targetPlayer);
     }
-    public void IsAttacing()
-    {
-        isAttacking = !isAttacking;
+    public void IsAttacing() => isAttacking = !isAttacking;
 
-    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
@@ -188,14 +221,13 @@ public class NPCManager : MonoBehaviour, ITakeDamage
 
     public void Attack(Transform target, float damage)
     {
-        Health health = _targetPlayer.GetComponent<Health>();
+        Health health = target.GetComponent<Health>();
         if (health != null)
         {
             health.health -= ((_npcAttackSetting.attackDamage) / 100);
-            health.health = health.health / 100;
             health.health = Mathf.Max(0, health.health);
             Debug.LogWarning("Attacking to Player " + health.health);
-            UIManager.Instance.UpdateHealthPlayer(health.health);
+            UIManager.Instance.UpdateHealthPlayer(health.health / 100);
         }
     }
 
@@ -205,21 +237,15 @@ public class NPCManager : MonoBehaviour, ITakeDamage
     {
 
     }
-}
-[Serializable]
-public class NPCAttackSettings
-{
-    public ATTACKTYPE attackType;
-    public string attackName;
-    public float attackDamage;
-    public float distance;
-}
 
-[Serializable]
-public enum ATTACKTYPE
-{
-    FLYFAR,
-    FAR,
-    NEAR,
-    SONEAR,
+    internal void Die()
+    {
+        currentState.Die(this);
+        isDead = true;
+        _targetPlayer = null;
+        _npcMove.agent.isStopped = true;
+        _npcMove.agent.enabled = false;
+        GetComponent<Collider>().enabled = false;
+        Destroy(gameObject, 10f);
+    }
 }

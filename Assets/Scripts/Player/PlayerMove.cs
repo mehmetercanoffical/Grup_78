@@ -3,9 +3,11 @@ using UnityEngine;
 public class PlayerMove : Singleton<PlayerMove>
 {
     public float speed = 5f;
+    private float _speed = 5f;
     public float lerpSpeed = .2f;
     public float maxLength = 1f;
     public float rotationSpeed = 1f;
+    public float maxSpeed = 10f;
 
     [Header("Gravity")]
     public float jumpForce = 5f;
@@ -37,6 +39,11 @@ public class PlayerMove : Singleton<PlayerMove>
         float vertical = Input.GetAxis(verticalInput);
         moveVector = new Vector3(horizontal, 0, vertical);
 
+        if(Input.GetKey(KeyCode.LeftShift))
+           _speed = maxSpeed;
+        else
+            _speed = speed;
+
         Jump();
         Rotate();
         Move();
@@ -59,7 +66,7 @@ public class PlayerMove : Singleton<PlayerMove>
     {
         if (moveVector != Vector3.zero)
         {
-            Vector3 move = Vector3.Slerp(transform.forward, rotOffset, Time.deltaTime * speed);
+            Vector3 move = Vector3.Slerp(transform.forward, rotOffset, Time.deltaTime * _speed);
             controller.Move((move.normalized / 2) * Time.deltaTime);
             isPlayerMoving = true;
         }
@@ -77,12 +84,10 @@ public class PlayerMove : Singleton<PlayerMove>
         if (controller.isGrounded)
         {
             verticalVelocity = -gravity * Time.deltaTime;
-
             if (Input.GetKeyDown(KeyCode.Space))
                 verticalVelocity = jumpForce;
         }
-        else
-            verticalVelocity -= gravity * Time.deltaTime;
+        else  verticalVelocity -= gravity * Time.deltaTime;
 
         moveVector.y = verticalVelocity;
     }

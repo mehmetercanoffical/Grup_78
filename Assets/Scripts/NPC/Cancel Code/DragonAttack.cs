@@ -16,7 +16,6 @@ public class DragonAttack : NPCAttackBase
          manager.anim.SetTrigger(attackName);
         if (manager.isAttacking) manager.anim.SetTrigger(attackName);
         currentDistance = distance;
-        Debug.Log("Attacking");
     }
 
     public override void Start(NPCManager manager) => attackTime = manager.attackWaitTime;
@@ -46,7 +45,7 @@ public class DragonAttack : NPCAttackBase
 
     public override void Die(NPCManager manager)
     {
-
+        _target = null;
     }
 
     public override void Exit(NPCManager manager)

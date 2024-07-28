@@ -8877,7 +8877,7 @@ Transform:
   m_GameObject: {fileID: 1882321945}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071057, z: -0, w: 0.7071079}
-  m_LocalPosition: {x: -162.10004, y: 29.799995, z: 0}
+  m_LocalPosition: {x: -162.10004, y: 18.71, z: 0}
   m_LocalScale: {x: 1.8051337, y: 1.3556126, z: 2.0544693}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27101,33 +27101,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &3024438605251050880
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8057749898783244203}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &3032406091206022160
 GameObject:
   m_ObjectHideFlags: 0
@@ -29321,6 +29294,7 @@ GameObject:
   - component: {fileID: 7901255725338002674}
   - component: {fileID: 3290330347224622670}
   - component: {fileID: 7901255725338002675}
+  - component: {fileID: 7901255725338002676}
   m_Layer: 6
   m_Name: Enemy Dragon
   m_TagString: Enemy
@@ -39315,14 +39289,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8057749898783244203}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071057, z: 0, w: 0.7071079}
-  m_LocalPosition: {x: 247.96, y: 49.59, z: 12.74}
-  m_LocalScale: {x: 1.8051337, y: 1.3556126, z: 2.0544693}
+  m_LocalRotation: {x: 0.0006228909, y: -0.059707314, z: -0.024428926, w: 0.9979168}
+  m_LocalPosition: {x: 3.21, y: 12.19, z: -9.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1350899021885877760}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 147.715, z: 0}
+  m_Father: {fileID: 7901255725338002674}
+  m_LocalEulerAnglesHint: {x: -0.096, y: -6.846, z: -2.799}
 --- !u!4 &6575567127198322722
 Transform:
   m_ObjectHideFlags: 0
@@ -50085,6 +50059,7 @@ Transform:
   m_LocalScale: {x: 1.8051337, y: 1.3556126, z: 2.0544693}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6541151590287743161}
   - {fileID: 9061922225940138928}
   - {fileID: 2793288349521709444}
   - {fileID: 7525038300884714559}
@@ -50111,10 +50086,22 @@ MonoBehaviour:
   - {fileID: 1882321946}
   - {fileID: 1882493637}
   - {fileID: 443959286}
-  speed: 10
-  rotationSpeed: 5
-  reachDistance: 1
-  currentPath: 0
+--- !u!114 &7901255725338002676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5814509744116228038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb2fa7e5b77efc4b80ecc1e3bd51258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: {fileID: 7901255725338002675}
+  target: {fileID: 7901255725338002674}
+  followSpeed: 0.01
+  lookAheadTime: 2
 --- !u!114 &7905652280288156625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50361,9 +50348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6541151590287743161}
-  - component: {fileID: 3024438605251050880}
   - component: {fileID: 1885044998081932236}
-  - component: {fileID: 8057749898783244204}
   m_Layer: 0
   m_Name: Third Person Camera
   m_TagString: MainCamera
@@ -50371,22 +50356,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &8057749898783244204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8057749898783244203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abb2fa7e5b77efc4b80ecc1e3bd51258, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Target: {fileID: 553693058}
-  speed: 30
-  rotationSpeed: 5
-  offset: {x: -10.2, y: 6.63, z: -1.94}
 --- !u!4 &8075069399078841118
 Transform:
   m_ObjectHideFlags: 0
@@ -60819,6 +60788,5 @@ SceneRoots:
   - {fileID: 254187377}
   - {fileID: 882116495}
   - {fileID: 1105302945}
-  - {fileID: 6541151590287743161}
   - {fileID: 7901255725338002674}
   - {fileID: 99497197}

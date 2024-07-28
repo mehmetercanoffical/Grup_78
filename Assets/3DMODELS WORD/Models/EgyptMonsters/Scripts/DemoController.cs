@@ -171,7 +171,7 @@ public class DemoController : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                Application.LoadLevel(Application.loadedLevelName);
+                //Application.LoadLevel(Application.loadedLevelName);
                 yield break;
             }
             else

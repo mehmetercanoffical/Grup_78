@@ -1383,6 +1383,7 @@ MonoBehaviour:
   lerpSpeed: 0.2
   maxLength: 1.5
   rotationSpeed: 10
+  maxSpeed: 10
   jumpForce: 5
   anim: {fileID: 972237636731603857}
   ThirdPersonCamera: {fileID: 0}

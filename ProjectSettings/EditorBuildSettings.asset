@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/3DMODELS WORD/Scene 2/Scene2.unity
     guid: c732593fe76e5a84197f9cd13963f706
   - enabled: 1
-    path: Assets/3DMODELS WORD/Scene 3/Scene 3 2/Scene3.unity
+    path: Assets/3DMODELS WORD/Scene 2/Simple Modular Dungeon/Scenes/Scene3.unity
+    guid: 27915ac565aadf048b89a94d619c501d
+  - enabled: 1
+    path: Assets/3DMODELS WORD/Scene 3/Scene 3 2/Scene4.unity
     guid: 4ca985fa1241b8e4c8c04d56174d0b16
   m_configObjects: {}
