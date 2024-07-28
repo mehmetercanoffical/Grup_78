@@ -9,6 +9,7 @@ public class DialogController : Singleton<DialogController>
     private int index;
     public float typingSpeed;
     private string text;
+    public bool isFinish = false;
 
     private void Start()
     {
@@ -33,11 +34,15 @@ public class DialogController : Singleton<DialogController>
 
     public void Next()
     {
-        if (DialogUI.Instance.GetText() == sentences[index].text) NextSentence();
+        if (DialogUI.Instance.GetText() == sentences[index].text)
+        {
+            NextSentence();
+        }
         else
         {
             StopAllCoroutines();
             SetTextOnUI(sentences[index].text);
+            Debug.Log("Here");
         }
     }
     IEnumerator Conversation()
@@ -65,7 +70,7 @@ public class DialogController : Singleton<DialogController>
         {
             DialogUI.Instance.ShowDialog(false);
             SetTextOnUI(string.Empty);
-
+            isFinish = true;
             index = 0;
         }
     }

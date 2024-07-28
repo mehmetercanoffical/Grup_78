@@ -192,7 +192,7 @@ public class NPCManager : MonoBehaviour, ITakeDamage
 
         currentState?.Exit(this);
         currentState = state;
-        gameObject.name = "Enemy - " + gameObject.name + " - " + state.GetType().Name;
+        gameObject.name = gameObject.name  + " Enemy - " + state.GetType().Name;
         currentState?.Start(this);
     }
     private void SetPos(Transform TargetPos, bool val)

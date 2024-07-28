@@ -75,12 +75,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetPlayer: {fileID: 0}
-  maxDistanceOffset: 27.31
+  nPCS: 0
+  maxDistanceOffset: 19.7
   remainingDistance: 2
   attackWaitTime: 2
   ChangeAttackByTime: 3
   isAttacking: 0
   isFirst: 0
+  isDead: 0
   playerLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -99,6 +101,7 @@ MonoBehaviour:
     attackDamage: 20
     distance: 3
   Fire: {fileID: 0}
+  DeactiveSwordTakeDamage: {fileID: 0}
 --- !u!114 &2372716545943566123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1287,6 +1290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  isDamage: 0
 --- !u!54 &1550902996372421108
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1906,6 +1910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+  isDamage: 0
 --- !u!1 &171792
 GameObject:
   m_ObjectHideFlags: 0

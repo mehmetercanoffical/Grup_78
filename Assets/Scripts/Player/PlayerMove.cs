@@ -39,10 +39,16 @@ public class PlayerMove : Singleton<PlayerMove>
         float vertical = Input.GetAxis(verticalInput);
         moveVector = new Vector3(horizontal, 0, vertical);
 
-        if(Input.GetKey(KeyCode.LeftShift))
-           _speed = maxSpeed;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Debug.Log("Sprint");
+            _speed = maxSpeed;
+        }
         else
+        {
+            Debug.Log("Walk");
             _speed = speed;
+        }
 
         Jump();
         Rotate();

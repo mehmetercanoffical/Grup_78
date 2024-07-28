@@ -8,10 +8,12 @@ public class Dialog : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //animator.SetBool("talk", true);
+            if (other.TryGetComponent(out PlayerLevelOne player))
+                other.GetComponent<PlayerLevelOne>().RotateToBilge();
+
             DialogUI.Instance.npcName = dialogSO.npcName;
             DialogController.Instance.StartConversation(dialogSO.dialogs);
-            animator.SetTrigger("Talk");    
+            animator.SetTrigger("Talk");
         }
     }
 
@@ -20,7 +22,10 @@ public class Dialog : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             if (Input.GetKeyDown(KeyCode.F))
-                DialogController.Instance.Next();
+            {
+                 DialogController.Instance.Next();
+                if (DialogController.Instance.isFinish) CloseDialog(other);
+            }
         }
     }
 
@@ -28,10 +33,16 @@ public class Dialog : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //animator.SetBool("talk", false);
-            DialogController.Instance.Reset();
-            DialogUI.Instance.ShowDialog(false);
-            animator.SetTrigger("Idle");
+            CloseDialog(other);
         }
+    }
+
+    private void CloseDialog(Collider other)
+    {
+        DialogController.Instance.Reset();
+        DialogUI.Instance.ShowDialog(false);
+        animator.SetTrigger("Idle");
+        if (other.TryGetComponent(out PlayerLevelOne player))
+            player.TurnPortal();
     }
 }
