@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PathFollowCamera : MonoBehaviour
@@ -14,6 +13,7 @@ public class PathFollowCamera : MonoBehaviour
     public GameObject Player;
     public bool isPlayerActive = false;
     public bool stop = false;
+    public bool isLevelChange = false;
 
 
     private void Start()
@@ -37,9 +37,13 @@ public class PathFollowCamera : MonoBehaviour
                 currentPath = paths.Count - 1;
                 if (Portal != null) Portal.SetActive(true);
                 if (isPlayerActive) StartCoroutine(Active());
+              if(isLevelChange)
+                LevelChange();
             } 
         }
     }
+
+    private void LevelChange() => LevelManager.Instance.NextLevel();
 
     IEnumerator Active()
     {

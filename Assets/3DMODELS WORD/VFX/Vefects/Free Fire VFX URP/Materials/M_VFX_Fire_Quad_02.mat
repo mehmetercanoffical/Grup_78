@@ -8,9 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_VFX_Fire_Quad_02
-  m_Shader: {fileID: 4800000, guid: 2ce4c95e7106985488f7f5bb730b3ae5, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7a7b02219c97cfa48b5182adc1238a05, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _ADD_PRECOMPUTED_VELOCITY
+  - _ENABLE_FOG_ON_TRANSPARENT
+  - _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,6 +25,7 @@ Material:
   disabledShaderPasses:
   - DistortionVectors
   - TransparentBackface
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -44,7 +50,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise_01_Texture:
-        m_Texture: {fileID: 2800000, guid: f1b6b10620016be45b38159cac55e09b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5301f8ff7e2edea4c86dfaf8247a1ec5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise_02_Texture:
@@ -64,22 +70,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0.3}
     - _TextureSample2:
-        m_Texture: {fileID: 2800000, guid: e4032b025693bfb47ae0e50da323b3b1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7eb80d217035c754e91933ce42a82aec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_Lightmaps:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_LightmapsInd:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - unity_ShadowMasks:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -128,8 +122,6 @@ Material:
     - _Opacity_DepthFade: 1
     - _Opacity_DepthFade_Intensity: 0.4
     - _Power: 1
-    - _QueueControl: 0
-    - _QueueOffset: 0
     - _ReceivesSSR: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
