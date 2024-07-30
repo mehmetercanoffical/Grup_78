@@ -6,7 +6,7 @@ public class MainPlayerManager : MonoBehaviour, ITakeDamage
 
     private AttackMachineBaseManager AttackMachineBase;
     private void Awake() => AttackMachineBase = GetComponent<AttackMachineBaseManager>();
-    public void Attack(Transform target, float damage)
+    public void AttackComingPlayer(Transform target, float damage)
     {
         Health health = target.GetComponent<Health>();
         if (health != null)

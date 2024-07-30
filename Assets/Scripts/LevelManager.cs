@@ -21,13 +21,13 @@ public class LevelManager : Singleton<LevelManager>
     {
         if (DontStart)
             return;
+
         SceneLoader("Scene" + currentLevel.ToString());
     }
 
 
     public void SceneLoader(string sceneName)
     {
-
         StartCoroutine(SceneController(sceneName.ToString()));
     }
 
@@ -50,6 +50,7 @@ public class LevelManager : Singleton<LevelManager>
             }
         }
 
+        Debug.LogWarning(sceneName);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
 
         bool isSceneLoaded = false;
@@ -69,9 +70,6 @@ public class LevelManager : Singleton<LevelManager>
     }
 
     public void NextLevel() => SetCurrentLevel();
-
-
-
     public void SetCurrentLevel()
     {
         currentLevel++;
@@ -79,12 +77,10 @@ public class LevelManager : Singleton<LevelManager>
         if (currentLevel >= SceneManager.sceneCountInBuildSettings)
             currentLevel = 1;
 
-        SceneLoader(currentLevel.ToString());
+        SceneLoader("Scene" + currentLevel.ToString());
     }
 
 }
-
-
 
 
 #if UNITY_EDITOR
@@ -96,10 +92,7 @@ public class LevelManagerCustom : Editor
     {
         base.OnInspectorGUI();
 
-        if (GUILayout.Button("Next Level"))
-        {
-            LevelManager.Instance.NextLevel();
-        }
+        if (GUILayout.Button("Next Level")) LevelManager.Instance.NextLevel();
     }
 }
-#endif
+#endif  

@@ -22,3 +22,9 @@ MonoBehaviour:
     isPlayer: 1
   - text: "Oras\u0131 \xE7ok tehlikeli."
     isPlayer: 0
+  - text: Oraya gitmemelisin.
+    isPlayer: 0
+  - text: "Sevdi\u011Fimi kurtarmal\u0131y\u0131m."
+    isPlayer: 1
+  - text: "O zaman Yolda ejderhalar\u0131n ve devlerin oldu\u011Fu unutma."
+    isPlayer: 0

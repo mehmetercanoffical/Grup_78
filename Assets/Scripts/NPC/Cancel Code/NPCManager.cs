@@ -192,7 +192,7 @@ public class NPCManager : MonoBehaviour, ITakeDamage
 
         currentState?.Exit(this);
         currentState = state;
-        gameObject.name = gameObject.name  + " Enemy - " + state.GetType().Name;
+        gameObject.name = gameObject.name + " Enemy - " + state.GetType().Name;
         currentState?.Start(this);
     }
     private void SetPos(Transform TargetPos, bool val)
@@ -219,7 +219,7 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         }
     }
 
-    public void Attack(Transform target, float damage)
+    public void AttackComingPlayer(Transform target, float damage)
     {
         Health health = target.GetComponent<Health>();
         if (health != null)
@@ -231,7 +231,11 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         }
     }
 
-    internal void TakeDamage() => anim.SetTrigger(_takeDamage);
+    internal void TakeDamage()
+    {
+        Debug.Log("Take Damage coming Player", gameObject);
+        anim.SetTrigger(_takeDamage);
+    }
 
     public void CollisionControl(bool val)
     {

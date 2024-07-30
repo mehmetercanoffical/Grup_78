@@ -26,7 +26,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a71ff56e84df36d4e9e64fbdea578797,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.05
+      value: 21.715864
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a71ff56e84df36d4e9e64fbdea578797,
         type: 3}
@@ -36,27 +36,27 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a71ff56e84df36d4e9e64fbdea578797,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -48.18
+      value: -48.179924
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a71ff56e84df36d4e9e64fbdea578797,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.015805973
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a71ff56e84df36d4e9e64fbdea578797,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a71ff56e84df36d4e9e64fbdea578797,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: -0.9998751
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a71ff56e84df36d4e9e64fbdea578797,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a71ff56e84df36d4e9e64fbdea578797,
         type: 3}
@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a71ff56e84df36d4e9e64fbdea578797,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
+      value: -178.189
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a71ff56e84df36d4e9e64fbdea578797,
         type: 3}
@@ -136,7 +136,8 @@ MonoBehaviour:
   anim: {fileID: 3847849177071912395}
   stop: 0
   bilge: {fileID: 0}
-  rotationSpeed: 45
+  Portal: {fileID: 0}
+  rotationSpeed: 90
   pathFollowCamera: {fileID: 0}
 --- !u!136 &7425891237788765201
 CapsuleCollider:

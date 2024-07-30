@@ -2,7 +2,7 @@ using UnityEngine;
 
 public interface ITakeDamage
 {
-    void Attack(Transform target, float damage);
+    void AttackComingPlayer(Transform target, float damage);
     void CollisionControl(bool val);
 }
 
@@ -24,5 +24,5 @@ public class TakeDamagePlayer : MonoBehaviour
             Attack(other.transform, damage);
         }
     }
-    public void Attack(Transform other, float damage) => takeDamage.Attack(other, damage);
+    public void Attack(Transform other, float damage) => takeDamage.AttackComingPlayer(other, damage);
 }

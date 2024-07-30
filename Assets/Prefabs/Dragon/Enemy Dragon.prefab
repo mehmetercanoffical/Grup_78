@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  isDamage: 0
 --- !u!1 &720081983472429708
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,6 +1000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  isDamage: 0
 --- !u!1 &3446803798050284485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,6 +1767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  isDamage: 0
 --- !u!1 &5446764850397765008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,7 +1963,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.46, y: 0.06, z: -34.92}
-  m_LocalScale: {x: 0.3079181, y: 0.3079181, z: 0.3079181}
+  m_LocalScale: {x: 0.30791807, y: 0.3079181, z: 0.30791807}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2793288348494323556}
@@ -2017,12 +2020,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetPlayer: {fileID: 0}
+  nPCS: 0
   maxDistanceOffset: 14.3
   remainingDistance: 7.97
   attackWaitTime: 3
   ChangeAttackByTime: 3
   isAttacking: 0
   isFirst: 1
+  isDead: 0
   playerLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -2049,6 +2054,7 @@ MonoBehaviour:
     attackDamage: 20
     distance: 1.29
   Fire: {fileID: 8133683626083098061}
+  DeactiveSwordTakeDamage: {fileID: 0}
 --- !u!114 &5637541559232505807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2126,7 +2132,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

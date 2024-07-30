@@ -24,5 +24,5 @@ public class TakeDamageEnemy : MonoBehaviour
             isDamage = false;
     }
 
-    public void Attack(Transform other, float damage) => takeDamage.Attack(other, damage);
+    public void Attack(Transform other, float damage) => takeDamage.AttackComingPlayer(other, damage);
 }
