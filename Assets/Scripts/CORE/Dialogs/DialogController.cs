@@ -26,7 +26,7 @@ public class DialogController : Singleton<DialogController>
 
     public void Next()
     {
-        
+
         if (DialogUI.Instance.GetText() == sentences[index].text) NextSentence();
         else
         {
@@ -48,7 +48,7 @@ public class DialogController : Singleton<DialogController>
 
     public void NextSentence()
     {
-           
+
         if (index < sentences.Length - 1)
         {
             index++;

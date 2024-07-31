@@ -488,6 +488,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   isPlayerActive: 0
   stop: 0
+  isLevelChange: 0
 --- !u!1 &35045255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7561689862600589418, guid: 78c38a2ce1ff27846821c1a5b5faa58d,
@@ -2211,16 +2212,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fire_Staff (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4191109479516882590, guid: 17a0baaeb26ea2848969ee4c74830dc2,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.5614996
-      objectReference: {fileID: 0}
-    - target: {fileID: 4191109479516882590, guid: 17a0baaeb26ea2848969ee4c74830dc2,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.5614996
       objectReference: {fileID: 0}
     - target: {fileID: 4191109479516882590, guid: 17a0baaeb26ea2848969ee4c74830dc2,
         type: 3}
@@ -7766,11 +7757,6 @@ PrefabInstance:
       propertyPath: Portal
       value: 
       objectReference: {fileID: 1389892313}
-    - target: {fileID: 3845624643851387648, guid: 41eb080dc7c920346aef20e122b17add,
-        type: 3}
-      propertyPath: rotationSpeed
-      value: 120
-      objectReference: {fileID: 0}
     - target: {fileID: 3845624643851387648, guid: 41eb080dc7c920346aef20e122b17add,
         type: 3}
       propertyPath: pathFollowCamera

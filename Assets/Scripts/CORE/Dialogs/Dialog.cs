@@ -29,9 +29,7 @@ public class Dialog : MonoBehaviour
         {
             DialogController.Instance.Next();
             if (DialogController.Instance.isFinish)
-            {
                 CloseDialog();
-            }
         }
     }
 

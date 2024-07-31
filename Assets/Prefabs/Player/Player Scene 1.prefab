@@ -137,7 +137,8 @@ MonoBehaviour:
   stop: 0
   bilge: {fileID: 0}
   Portal: {fileID: 0}
-  rotationSpeed: 90
+  rotationSpeedToBilge: 40
+  rotationSpeedPortal: 60
   pathFollowCamera: {fileID: 0}
 --- !u!136 &7425891237788765201
 CapsuleCollider:
