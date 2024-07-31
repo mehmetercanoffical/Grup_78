@@ -5,7 +5,11 @@ using UnityEngine;
 public class ChestOpen : MonoBehaviour
 {
     public Animator anim;
-    public void Open() => anim.SetTrigger("Open");
+    public void Open()
+    {
+        anim.SetTrigger("Open");
+        LevelManager.Instance.NextLevel();
+    }
 
     private void OnTriggerEnter(Collider other)
     {

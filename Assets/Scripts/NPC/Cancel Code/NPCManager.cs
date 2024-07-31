@@ -204,7 +204,9 @@ public class NPCManager : MonoBehaviour, ITakeDamage
     }
     public void IsAttacing() => isAttacking = !isAttacking;
 
-    private void OnDrawGizmos()
+
+
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, maxDistanceOffset);

@@ -43,7 +43,6 @@ public class SoliderAttack : NPCAttackBase
 
     public override void Die(NPCManager manager)
     {
-        Debug.Log("Die");
         _target = null;
         manager.anim.SetTrigger(_die);
     }

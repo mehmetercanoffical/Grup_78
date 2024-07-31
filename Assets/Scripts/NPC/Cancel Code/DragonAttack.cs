@@ -46,6 +46,7 @@ public class DragonAttack : NPCAttackBase
     public override void Die(NPCManager manager)
     {
         _target = null;
+        manager.anim.SetTrigger(_die);
     }
 
     public override void Exit(NPCManager manager)

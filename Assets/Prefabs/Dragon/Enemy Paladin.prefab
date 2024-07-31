@@ -2021,7 +2021,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -40, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2153627, y: 1.2153627, z: 1.2153627}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5294035056008450855}
@@ -2087,7 +2087,7 @@ MonoBehaviour:
   attackWaitTime: 1.5
   ChangeAttackByTime: 2
   isAttacking: 0
-  isFirst: 1
+  isFirst: 0
   isDead: 0
   playerLayers:
     serializedVersion: 2
@@ -2098,6 +2098,10 @@ MonoBehaviour:
     attackDamage: 0
     distance: 0
   npcAttackSetting:
+  - attackType: 1
+    attackName: Far
+    attackDamage: 20
+    distance: 6.24
   - attackType: 2
     attackName: Near
     attackDamage: 20
