@@ -41,12 +41,10 @@ public class PlayerMove : Singleton<PlayerMove>
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            Debug.Log("Sprint");
             _speed = maxSpeed;
         }
         else
         {
-            Debug.Log("Walk");
             _speed = speed;
         }
 
@@ -57,6 +55,8 @@ public class PlayerMove : Singleton<PlayerMove>
         Gravity();
 
     }
+
+  
 
     void Jump()
     {

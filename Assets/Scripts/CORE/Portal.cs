@@ -8,7 +8,6 @@ public class Portal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player entered the portal");
             LevelManager.Instance.NextLevel();
         }
     }

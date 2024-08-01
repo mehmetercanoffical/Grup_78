@@ -41,7 +41,6 @@ public class PlayerLevelOne : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, quaternion, _rotateSpeed * Time.deltaTime);
                 yield return null;
             }
-            Debug.Log("Rotate");
             pathFollowCamera.stop = !val;
             anim.SetBool("Walk", val);
 

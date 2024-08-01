@@ -33,6 +33,7 @@ public enum NPCS
 
 public class NPCManager : MonoBehaviour, ITakeDamage
 {
+
     internal NPCAttackBase currentState;
     internal Animator anim;
     private INPCManager _inpcAttack;
@@ -54,6 +55,7 @@ public class NPCManager : MonoBehaviour, ITakeDamage
 
     public NPCAttackSettings _npcAttackSetting;
     public List<NPCAttackSettings> npcAttackSetting;
+    [Header("NPC Dragon")]
     public ParticleSystem Fire;
 
     [Header("NPC Animation")]
@@ -63,22 +65,16 @@ public class NPCManager : MonoBehaviour, ITakeDamage
     private int _run = Animator.StringToHash("Run");
     private int _die = Animator.StringToHash("Die");
 
-
     [Header("NPC SOLIDER")]
     public GameObject DeactiveSwordTakeDamage;
 
 
-    public void FireStart()
-    {
-        Fire.Play();
-        Debug.Log("Fire Start");
-    }
+    public void FireStart() => Fire.Play();
 
     public void FireStop()
     {
         Fire.Stop();
         IsFirstDeactive();
-        Debug.Log("Fire Stop");
     }
 
     private void Awake()
@@ -123,8 +119,7 @@ public class NPCManager : MonoBehaviour, ITakeDamage
                     SetPos(players[0].transform, true);
 
                 }
-                else if (isAttacking)
-                    return;
+                else if (isAttacking)  return;
                 else
                 {
                     isAttacking = true;
@@ -226,18 +221,13 @@ public class NPCManager : MonoBehaviour, ITakeDamage
         Health health = target.GetComponent<Health>();
         if (health != null)
         {
-            health.health -= ((_npcAttackSetting.attackDamage) / 100);
+            health.health -= ((_npcAttackSetting.attackDamage * 4f) / 100);
             health.health = Mathf.Max(0, health.health);
-            Debug.LogWarning("Attacking to Player " + health.health);
             UIManager.Instance.UpdateHealthPlayer(health.health / 100);
         }
     }
 
-    internal void TakeDamage()
-    {
-        Debug.Log("Take Damage coming Player", gameObject);
-        anim.SetTrigger(_takeDamage);
-    }
+    internal void TakeDamage() => anim.SetTrigger(_takeDamage);
 
     public void CollisionControl(bool val)
     {

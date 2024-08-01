@@ -14,6 +14,7 @@ public class MainPlayerManager : MonoBehaviour, ITakeDamage
             health.health -= ((damage));
             health.health = Mathf.Max(0, health.health);
             target.GetComponent<NPCManager>().TakeDamage();
+            if(health.isBoss) UIManager.Instance.UpdateBossPlayer((health.health / 2f) / 100);
             if (health.health <= 0) target.GetComponent<NPCManager>().Die();
         }
     }

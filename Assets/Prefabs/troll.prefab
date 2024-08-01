@@ -193,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetPlayer: {fileID: 0}
   nPCS: 2
-  maxDistanceOffset: 10
+  maxDistanceOffset: 21.35
   remainingDistance: 2
   attackWaitTime: 2
   ChangeAttackByTime: 1
@@ -333,7 +333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26520138bb07ed04a9e903b5cce37dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
+  isBoss: 1
+  health: 400
 --- !u!1 &467577889597951589
 GameObject:
   m_ObjectHideFlags: 0

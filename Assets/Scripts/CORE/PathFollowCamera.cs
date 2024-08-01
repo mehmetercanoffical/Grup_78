@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PathFollowCamera : MonoBehaviour
 {
+    private const string JumpPortal = "JumpInPortal";
     public List<Transform> paths = new();
     public float speed = 1.0f;
     public float rotationSpeed = 1.0f;
@@ -14,7 +15,11 @@ public class PathFollowCamera : MonoBehaviour
     public bool isPlayerActive = false;
     public bool stop = false;
     public bool isLevelChange = false;
+    public bool lastPath = false;
 
+    private float _waitTime;
+    private bool stopWait = false;
+    Path _path;
 
     private void Start()
     {
@@ -25,22 +30,39 @@ public class PathFollowCamera : MonoBehaviour
     private void Update()
     {
         if (stop) return;
+
         float distance = Vector3.Distance(paths[currentPath].position, transform.position);
         transform.position = Vector3.MoveTowards(transform.position, paths[currentPath].position, Time.deltaTime * speed);
         transform.rotation = Quaternion.Slerp(transform.rotation, paths[currentPath].rotation, Time.deltaTime * rotationSpeed);
 
         if (distance <= reachDistance)
         {
+            if (paths[currentPath].GetComponent<Path>() != null && _path != paths[currentPath].GetComponent<Path>())
+            {
+                _waitTime = paths[currentPath].GetComponent<Path>().waitTime;
+                StartCoroutine(Wait());
+                _path = paths[currentPath].GetComponent<Path>();
+            }
+            if (stopWait) return;
+
             currentPath++;
             if (currentPath >= paths.Count)
             {
                 currentPath = paths.Count - 1;
+
                 if (Portal != null) Portal.SetActive(true);
                 if (isPlayerActive) StartCoroutine(Active());
-              if(isLevelChange)
-                LevelChange();
-            } 
+                if (isLevelChange)  LevelChange();
+            }
         }
+    }
+
+    IEnumerator Wait()
+    {
+        stopWait = true;
+        yield return new WaitForSeconds(_waitTime);
+        stopWait = false;
+        yield break;
     }
 
     private void LevelChange() => LevelManager.Instance.NextLevel();
@@ -49,7 +71,7 @@ public class PathFollowCamera : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         Player.SetActive(true);
-        Player.GetComponent<Animator>().SetTrigger("JumpInPortal");
+        Player.GetComponent<Animator>().SetTrigger(JumpPortal);
         isPlayerActive = false;
         yield return new WaitForSeconds(1.0f);
         while (Portal.transform.localScale.x > 0)
@@ -59,9 +81,10 @@ public class PathFollowCamera : MonoBehaviour
         }
         yield return new WaitForSeconds(1.0f);
         GetComponent<ThirdPersonCamera>().enabled = true;
+        UIManager.Instance.ShowPlayer(true);
         this.enabled = false;
 
-     
+
 
         Portal.SetActive(false);
     }

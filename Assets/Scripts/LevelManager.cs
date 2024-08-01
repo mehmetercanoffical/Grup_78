@@ -50,7 +50,6 @@ public class LevelManager : Singleton<LevelManager>
             }
         }
 
-        Debug.LogWarning(sceneName);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
 
         bool isSceneLoaded = false;
