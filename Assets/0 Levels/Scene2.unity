@@ -503,6 +503,7 @@ MonoBehaviour:
   isPlayerActive: 0
   stop: 0
   isLevelChange: 0
+  lastPath: 0
 --- !u!1 &35045255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7561689862600589418, guid: 78c38a2ce1ff27846821c1a5b5faa58d,
@@ -2154,6 +2155,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2350915906142038808, guid: 6cb872f0282bd6749a5b0e45a0719cbd,
+        type: 3}
+      propertyPath: typingSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8556742612336647624, guid: 6cb872f0282bd6749a5b0e45a0719cbd,
         type: 3}
       propertyPath: m_Name

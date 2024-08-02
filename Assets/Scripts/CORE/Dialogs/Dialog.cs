@@ -27,7 +27,7 @@ public class Dialog : MonoBehaviour
         if (!val) return;
         if (Input.GetKeyDown(KeyCode.F))
         {
-            DialogController.Instance.Next();
+            DialogController.Instance.NextText();
             if (DialogController.Instance.isFinish)
                 CloseDialog();
         }
