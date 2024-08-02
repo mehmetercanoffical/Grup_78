@@ -162,6 +162,12 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
          edilmesine karar verilmiştir.
      
        ● Görev dağılımlarında görevler sadece aktif olarak destek sağlayan ekip üyelerine verilmesi kararı alınmıştır.
+
+     # SPRINT 3
+
+     ➼ Sprint içinde tamamlanması tahmin edilen puan: 100 Puan
+
+     ➼ Üçüncü sprint'in en az 100 puan ile tamamlanması gerektiğine karar verilmiştir ve hedefe ulaşılmıştır.
      
 
      
