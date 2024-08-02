@@ -12,6 +12,7 @@ public enum WhoIsObject
 public class GameManager : Singleton<GameManager>
 {
     public GameObject Player;
+    public float PlayerHealth = 100;
 
     private void OnEnable()
     {

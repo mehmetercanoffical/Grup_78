@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc62209d515536448f03943ab443623, type: 3}
   m_Name: First
   m_EditorClassIdentifier: 
-  npcName: Eldero
+  npcName: Bilge
   dialogs:
   - text: Merhaba
     isPlayer: 1

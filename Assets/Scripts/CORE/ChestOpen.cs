@@ -1,5 +1,4 @@
-    using System.Collections;
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class ChestOpen : MonoBehaviour
@@ -18,6 +17,12 @@ public class ChestOpen : MonoBehaviour
 
     public void NextLevel()
     {
+        StartCoroutine(LevelStart());
+    }
+
+    IEnumerator LevelStart()
+    {
+        yield return new WaitForSeconds(1f);
         LevelManager.Instance.NextLevel();
     }
 }

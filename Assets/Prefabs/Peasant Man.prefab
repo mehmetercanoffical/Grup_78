@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52c9fbdcdda99544a455574726fb92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSenteces: 0
   typingSpeed: 0.2
   isFinish: 0
 --- !u!1001 &8826705366827606169

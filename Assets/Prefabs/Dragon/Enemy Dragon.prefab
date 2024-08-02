@@ -2037,10 +2037,6 @@ MonoBehaviour:
     attackDamage: 0
     distance: 0
   npcAttackSetting:
-  - attackType: 0
-    attackName: FlyFar
-    attackDamage: 5
-    distance: 6.31
   - attackType: 1
     attackName: Far
     attackDamage: 15
@@ -3362,6 +3358,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3616793188384850983}
     m_Modifications:
+    - target: {fileID: 141999488026894662, guid: a62af3ac270ad904586676bea6c4978a,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 887923351439146022, guid: a62af3ac270ad904586676bea6c4978a,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3427,10 +3428,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 912443083454973445, guid: a62af3ac270ad904586676bea6c4978a,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102128956598222964, guid: a62af3ac270ad904586676bea6c4978a,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3872788207705118795, guid: a62af3ac270ad904586676bea6c4978a,
         type: 3}
       propertyPath: m_Name
       value: Fire_Torch_Parent (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818627338771699319, guid: a62af3ac270ad904586676bea6c4978a,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818627338771699319, guid: a62af3ac270ad904586676bea6c4978a,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8877851150654322737, guid: a62af3ac270ad904586676bea6c4978a,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

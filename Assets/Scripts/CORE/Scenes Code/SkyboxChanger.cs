@@ -9,5 +9,6 @@ public class SkyboxChanger : MonoBehaviour
     {
         ChangeSkybox();
         UIManager.Instance.ShowPlayer(isPlayerHaveAction);
+        UIManager.Instance.ArrowCursoure(false);
     }
 }

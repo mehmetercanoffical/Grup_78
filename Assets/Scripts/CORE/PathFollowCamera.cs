@@ -15,7 +15,6 @@ public class PathFollowCamera : MonoBehaviour
     public bool isPlayerActive = false;
     public bool stop = false;
     public bool isLevelChange = false;
-    public bool lastPath = false;
 
     private float _waitTime;
     private bool stopWait = false;
@@ -71,7 +70,7 @@ public class PathFollowCamera : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         Player.SetActive(true);
-        Player.GetComponent<Animator>().SetTrigger(JumpPortal);
+        //Player.GetComponent<Animator>().SetTrigger(JumpPortal);
         isPlayerActive = false;
         yield return new WaitForSeconds(1.0f);
         while (Portal.transform.localScale.x > 0)

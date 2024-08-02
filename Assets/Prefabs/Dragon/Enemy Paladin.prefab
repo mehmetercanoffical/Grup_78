@@ -2106,10 +2106,6 @@ MonoBehaviour:
     attackName: Near
     attackDamage: 20
     distance: 1.1
-  - attackType: 3
-    attackName: Attack
-    attackDamage: 20
-    distance: 0.72
   Fire: {fileID: 0}
   DeactiveSwordTakeDamage: {fileID: 9200888126586626024}
 --- !u!114 &5938858099573680031
@@ -2174,6 +2170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26520138bb07ed04a9e903b5cce37dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBoss: 0
   health: 100
 --- !u!136 &4118965794324430433
 CapsuleCollider:

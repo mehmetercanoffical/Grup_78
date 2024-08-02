@@ -7,7 +7,12 @@ public class TakeDamageEnemy : MonoBehaviour
     public bool isDamage = false;
     private void Start()
     {
-        if(takeDamage == null) takeDamage = transform.root.GetComponentInChildren<ITakeDamage>();
+        if (takeDamage == null)
+        {
+            takeDamage = transform.root.GetComponentInChildren<ITakeDamage>();
+            Debug.Log("TakeDamageEnemy:" + takeDamage);
+
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

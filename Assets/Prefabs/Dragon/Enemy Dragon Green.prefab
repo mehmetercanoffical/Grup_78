@@ -2278,7 +2278,7 @@ MonoBehaviour:
   attackWaitTime: 3
   ChangeAttackByTime: 3
   isAttacking: 0
-  isFirst: 1
+  isFirst: 0
   isDead: 0
   playerLayers:
     serializedVersion: 2
@@ -2289,14 +2289,6 @@ MonoBehaviour:
     attackDamage: 0
     distance: 0
   npcAttackSetting:
-  - attackType: 0
-    attackName: FlyFar
-    attackDamage: 5
-    distance: 6.31
-  - attackType: 1
-    attackName: Far
-    attackDamage: 15
-    distance: 4.19
   - attackType: 2
     attackName: Near
     attackDamage: 20

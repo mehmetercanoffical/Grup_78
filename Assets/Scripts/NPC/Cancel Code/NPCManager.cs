@@ -119,7 +119,7 @@ public class NPCManager : MonoBehaviour, ITakeDamage
                     SetPos(players[0].transform, true);
 
                 }
-                else if (isAttacking)  return;
+                else if (isAttacking) return;
                 else
                 {
                     isAttacking = true;
@@ -218,13 +218,18 @@ public class NPCManager : MonoBehaviour, ITakeDamage
 
     public void AttackComingPlayer(Transform target, float damage)
     {
-        Health health = target.GetComponent<Health>();
-        if (health != null)
+
+        Health health1 = target.GetComponent<Health>();
+        if (health1.health == 100)
         {
-            health.health -= ((_npcAttackSetting.attackDamage * 4f) / 100);
-            health.health = Mathf.Max(0, health.health);
-            UIManager.Instance.UpdateHealthPlayer(health.health / 100);
+            health1.health = GameManager.Instance.PlayerHealth;
+            Debug.Log(health1.health);
         }
+
+        health1.health -= ((_npcAttackSetting.attackDamage * 4f) / 100);
+        GameManager.Instance.PlayerHealth = health1.health;
+        health1.health = Mathf.Max(0, health1.health);
+        UIManager.Instance.UpdateHealthPlayer(health1.health / 100);
     }
 
     internal void TakeDamage() => anim.SetTrigger(_takeDamage);
