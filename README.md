@@ -178,6 +178,40 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
 
      ![DailyScrum2](https://github.com/user-attachments/assets/c9ea0a61-58a8-4108-84d7-64bbcf516bf9)
      
+     ➼ Tasarım ve Developing Kısmı: Üçüncü sprintte görev ayrımı gözetmeksizin projeye katılım sağlayan herkes 
+     yazılımla ilgilenmiştir.
+
+     ➼ Sprint-3 Board Screenshot:
+
+
+     ➼ Ürün Durumu Hakkında Ekran Görüntüleri ve Ekran Kayıtları:
+
+     <img width="602" alt="SahneTasarım1" src="https://github.com/user-attachments/assets/351b7a57-fcba-453a- 
+     a010-2c3b992da5c5">
+     
+     <img width="721" alt="SahneTasarım2" src="https://github.com/user-attachments/assets/16d4340c-82c0-45fa- 
+     9837-6523b8641f1c">
+     
+     <img width="863" alt="SahneTasarım3" src="https://github.com/user-attachments/assets/b21f8aba-61bf-4800- 
+     a493-a2577a0dd4f4">
+     
+     <img width="890" alt="SahneTasarım6" src="https://github.com/user-attachments/assets/17d89671-9813-40c5- 
+     a8c1-968f7271ac84">
+     
+     <img width="176" alt="SahneTasarım9" src="https://github.com/user-attachments/assets/2d5f2723-eace-44ef- 
+     a026-8d16e3bab39b">
+     
+     <img width="967" alt="SahneTasarım8" src="https://github.com/user-attachments/assets/8d7f3096-aba9-4e99- 
+     8f4f-d46edf09a3b5">
+     
+     <img width="966" alt="SahneTasarım4" src="https://github.com/user-attachments/assets/248e0f5c-349f-44d2- 
+     afe8-2623412f01ad">
+     
+     <img width="314" alt="SahneTasarım5" src="https://github.com/user-attachments/assets/56a198a6-6bfe-4876- 
+     8ed4-758f7f403aad">
+
+     <img width="638" alt="SahneTasarım7" src="https://github.com/user-attachments/assets/b3137b79-b8a5-4f8c- 
+     b432-94b7371df7d0">
 
      
 
