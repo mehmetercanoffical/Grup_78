@@ -194,8 +194,6 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
      
      ![Tasarım7](https://github.com/user-attachments/assets/41c2f032-c9de-403a-a1c1-337ca0ce1f14)
      
-     ![Tasarım8](https://github.com/user-attachments/assets/6abed5cb-ec69-41cd-8dee-6a223ef3bd14)
-     
      ![Tasarım1](https://github.com/user-attachments/assets/5ce1c121-8265-4f74-8465-313831035a4e)
      
      ![Tasarım2](https://github.com/user-attachments/assets/eac7860a-8e02-43a5-a007-4c6176af5564)
