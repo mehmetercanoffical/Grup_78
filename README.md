@@ -10,7 +10,7 @@ Unity Takım 78
 
 ⦁ Elif Dilekli ➼ Developer 
 
-⦁ Kaan Erdoğan ➼ Developer 
+⦁ Kaan Erdoğan ➼ Aktif Olmayan Takım Üyesi
 
 ⦁ Emre Armutluk ➼ Aktif Olmayan Takım Üyesi
 
