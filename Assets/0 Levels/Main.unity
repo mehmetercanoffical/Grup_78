@@ -2552,7 +2552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadingBar: {fileID: 0}
-  DontStart: 1
+  DontStart: 0
   currentLevel: 1
 --- !u!4 &2146988527
 Transform:
