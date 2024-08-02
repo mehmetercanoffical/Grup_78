@@ -148,7 +148,8 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
      
        ● Oyunda kullanılacak birçok ses dosyaları, assetler, modeller ve karakterler bulunmuştur.
      
-       ● Oyunun içeriğine göre oyunun ilk bölüm tasarımı tamamlanmıştır ve diğer bölüm tasarımlarının çalışmaları devam etmektedir.
+       ● Oyunun içeriğine göre oyunun ilk bölüm tasarımı tamamlanmıştır ve diğer bölüm tasarımlarının 
+       çalışmaları devam etmektedir.
      
        ● Oyundan kullanılacak düşman karakterlerinin animasyonları tamamlanmıştır.
      
@@ -158,10 +159,12 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
 
      ➼ Sprint Retrospective:
      
-       ● Görev dağıtımlarında verilen sorumluluklar kapsamında yerine getirilmeyen sorumluluklar neticesinde görevlendirmelere daha az kişi ile devam 
-         edilmesine karar verilmiştir.
+       ● Görev dağıtımlarında verilen sorumluluklar kapsamında yerine getirilmeyen sorumluluklar neticesinde 
+       görevlendirmelere daha az kişi ile devam 
+       edilmesine karar verilmiştir.
      
-       ● Görev dağılımlarında görevler sadece aktif olarak destek sağlayan ekip üyelerine verilmesi kararı alınmıştır.
+       ● Görev dağılımlarında görevler sadece aktif olarak destek sağlayan ekip üyelerine verilmesi kararı 
+       alınmıştır.
 
      # SPRINT 3
 
@@ -202,8 +205,6 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
      ![tasarım3](https://github.com/user-attachments/assets/34b54b19-e6b4-42c5-a783-51ac7353988c)
 
      https://github.com/user-attachments/assets/fc443b2d-45f1-42f1-9af4-a203db45163d
-
-     https://github.com/user-attachments/assets/0e6a646e-faa0-4bcf-bf1b-3f542eb42161
 
      ➼ Sprint Review:
 
