@@ -320,15 +320,15 @@ MonoBehaviour:
     m_Value: 0.37
   intensity:
     m_OverrideState: 1
-    m_Value: 0.27
+    m_Value: 0.59
   scatter:
     m_OverrideState: 1
     m_Value: 0
   clamp:
     m_OverrideState: 0
-    m_Value: 65472.85
+    m_Value: 65471.95
   tint:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 1}
   highQualityFiltering:
     m_OverrideState: 1
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   intensity:
     m_OverrideState: 0
     m_Value: 0
@@ -488,13 +488,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   postExposure:
     m_OverrideState: 1
     m_Value: 0
   contrast:
     m_OverrideState: 1
-    m_Value: 32.2
+    m_Value: 16
   colorFilter:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -559,7 +559,7 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9866784, z: 0.99666977, w: 0}
+    m_Value: {x: 1, y: 0.9866784, z: 0.99666977, w: 0.013008229}
   gamma:
     m_OverrideState: 1
     m_Value: {x: 1, y: 0.9747444, z: 0.9438271, w: 0}
@@ -578,7 +578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
   m_Name: ShadowsMidtonesHighlights
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   shadows:
     m_OverrideState: 1
     m_Value: {x: 1, y: 0.9842967, z: 0.96276563, w: 0}

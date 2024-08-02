@@ -4,23 +4,32 @@ public class Dialog : MonoBehaviour
 {
     public Animator animator;
     public CreatDialogSO dialogSO;
+    bool val;
+    GameObject _other;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            //animator.SetBool("talk", true);
+            _other = other.gameObject;
+            val = true;
+
+            if (other.TryGetComponent(out PlayerLevelOne _))
+                other.GetComponent<PlayerLevelOne>().RotateToBilge();
+
             DialogUI.Instance.npcName = dialogSO.npcName;
             DialogController.Instance.StartConversation(dialogSO.dialogs);
-            animator.SetTrigger("Talk");    
+            animator.SetTrigger("Talk");
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
-        if (other.CompareTag("Player"))
+        if (!val) return;
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            if (Input.GetKeyDown(KeyCode.F))
-                DialogController.Instance.Next();
+            DialogController.Instance.NextText();
+            if (DialogController.Instance.isFinish)
+                CloseDialog();
         }
     }
 
@@ -28,10 +37,17 @@ public class Dialog : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //animator.SetBool("talk", false);
-            DialogController.Instance.Reset();
-            DialogUI.Instance.ShowDialog(false);
-            animator.SetTrigger("Idle");
+            _other = other.gameObject;
+            CloseDialog();
+            val = false;
         }
+    }
+
+    private void CloseDialog()
+    {
+        DialogController.Instance.Reset();
+        DialogUI.Instance.ShowDialog(false);
+        animator.SetTrigger("Idle");
+        if (_other.TryGetComponent(out PlayerLevelOne player)) player.TurnPortal();
     }
 }

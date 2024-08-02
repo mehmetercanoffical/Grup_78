@@ -85,7 +85,6 @@ namespace AttackSystem
             if (currentAttack == nextAnim) return;
             currentAttack = nextAnim;
             attack.AttackAnim.CrossFadeInFixedTime(currentAttack, 0.1f);
-            Debug.Log(currentAttack);
 
         }
 

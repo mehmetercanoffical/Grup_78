@@ -1,5 +1,4 @@
 using UnityEngine;
-using NPCSpace;
 
 namespace AttackSystem
 {
@@ -12,8 +11,18 @@ namespace AttackSystem
         {
             rb.isKinematic = false;
             rb.AddForce(direction * speed, ForceMode.Impulse);
-            //rb.velocity = direction * speed;
+        }
 
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("Enemy"))
+            {
+                
+                if(other.GetComponent<NPCManager>().nPCS == NPCS.TROLL)
+                    other.GetComponent<NPCManager>().maxDistanceOffset += 5f;
+
+                Destroy(gameObject);
+            }
         }
     }
 }

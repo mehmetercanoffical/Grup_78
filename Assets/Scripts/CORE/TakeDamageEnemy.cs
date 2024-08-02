@@ -1,20 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TakeDamageEnemy : MonoBehaviour
 {
-    private ITakeDamage takeDamage;
-    public int damage = 0;
+    public ITakeDamage takeDamage;
+    public float damage = 0;
+    public bool isDamage = false;
     private void Start()
     {
-        takeDamage = transform.root.GetComponent<ITakeDamage>();
+        if (takeDamage == null)
+        {
+            takeDamage = transform.root.GetComponentInChildren<ITakeDamage>();
+            Debug.Log("TakeDamageEnemy:" + takeDamage);
+
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isDamage)
+        {
+            isDamage = true;
             Attack(other.transform, damage);
+        }
     }
 
-    public void Attack(Transform other, float damage) => takeDamage.Attack(other, damage);
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+            isDamage = false;
+    }
+
+    public void Attack(Transform other, float damage) => takeDamage.AttackComingPlayer(other, damage);
 }

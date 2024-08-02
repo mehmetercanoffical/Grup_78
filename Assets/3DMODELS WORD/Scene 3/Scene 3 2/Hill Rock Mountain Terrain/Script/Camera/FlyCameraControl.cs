@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// Bu kod bize ait deðildir.
 public class FlyCameraControl : MonoBehaviour
 {
     public float rotationSpeed = 300.0f;
     public float moveSpeed = 5.0f; // The speed of the movement
     public float speedAdjustmentFactor = 100.0f; // The factor by which the speed is adjusted
-    public float smoothSpeed = 0.01f; // The speed of the smooth movement
+    public float smoothSpeed = 0.01f; 
 
     private float x = 0.0f;
     private float y = 0.0f;

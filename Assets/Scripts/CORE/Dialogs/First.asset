@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc62209d515536448f03943ab443623, type: 3}
   m_Name: First
   m_EditorClassIdentifier: 
-  npcName: Eldero
+  npcName: Bilge
   dialogs:
   - text: Merhaba
     isPlayer: 1
@@ -21,4 +21,10 @@ MonoBehaviour:
   - text: "Ejderhalar\u0131n d\xFCnyas\u0131na gitmek istiyorum."
     isPlayer: 1
   - text: "Oras\u0131 \xE7ok tehlikeli."
+    isPlayer: 0
+  - text: Oraya gitmemelisin.
+    isPlayer: 0
+  - text: "Sevdi\u011Fimi kurtarmal\u0131y\u0131m."
+    isPlayer: 1
+  - text: "O zaman Yolda ejderhalar\u0131n ve devlerin oldu\u011Fu unutma."
     isPlayer: 0

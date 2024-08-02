@@ -27,7 +27,7 @@ namespace NPCSpace
 
         internal void RemainingDistance(float dis) => agent.stoppingDistance = dis;
 
-        internal void Stop(bool val) => agent.isStopped = val;  
+        internal void Stop(bool val) => agent.isStopped = val;
 
         internal void RotateToPlayer()
         {
@@ -42,10 +42,10 @@ namespace NPCSpace
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.grey;
-            Ray ray = new(transform.position, new Vector3(0,0, manager.remainingDistance));
+            Ray ray = new(transform.position, new Vector3(0, 0, manager.remainingDistance));
             Gizmos.DrawRay(ray);
         }
     }
 
-    
+
 }

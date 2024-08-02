@@ -15,7 +15,6 @@ public class SoliderAttack : NPCAttackBase
     {
         manager.anim.SetTrigger(attackName);
         currentDistance = distance;
-        Debug.Log("Attacking");
     }
 
     public override void Start(NPCManager manager) => attackTime = manager.attackWaitTime;
@@ -32,7 +31,6 @@ public class SoliderAttack : NPCAttackBase
             {
                 attackTime = manager.attackWaitTime;
                 AttackTo(manager, manager._npcAttackSetting.attackName, distance);
-
             }
         }
     }
@@ -45,7 +43,8 @@ public class SoliderAttack : NPCAttackBase
 
     public override void Die(NPCManager manager)
     {
-
+        _target = null;
+        manager.anim.SetTrigger(_die);
     }
 
     public override void Exit(NPCManager manager)
