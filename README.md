@@ -186,32 +186,21 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
 
      ➼ Ürün Durumu Hakkında Ekran Görüntüleri ve Ekran Kayıtları:
 
-     <img width="602" alt="SahneTasarım1" src="https://github.com/user-attachments/assets/351b7a57-fcba-453a- 
-     a010-2c3b992da5c5">
+     ![Tasarım4](https://github.com/user-attachments/assets/87ce138f-4f11-4fde-8a7e-8bcdb49c26a9)
      
-     <img width="721" alt="SahneTasarım2" src="https://github.com/user-attachments/assets/16d4340c-82c0-45fa- 
-     9837-6523b8641f1c">
+     ![Tasarım5](https://github.com/user-attachments/assets/691505d7-17d8-419d-a9e8-cb7f904c1157)
      
-     <img width="863" alt="SahneTasarım3" src="https://github.com/user-attachments/assets/b21f8aba-61bf-4800- 
-     a493-a2577a0dd4f4">
+     ![Tasarım6](https://github.com/user-attachments/assets/96f9ac2a-a05d-486e-aede-b4f0ffc2f44f)
      
-     <img width="890" alt="SahneTasarım6" src="https://github.com/user-attachments/assets/17d89671-9813-40c5- 
-     a8c1-968f7271ac84">
+     ![Tasarım7](https://github.com/user-attachments/assets/41c2f032-c9de-403a-a1c1-337ca0ce1f14)
      
-     <img width="176" alt="SahneTasarım9" src="https://github.com/user-attachments/assets/2d5f2723-eace-44ef- 
-     a026-8d16e3bab39b">
+     ![Tasarım8](https://github.com/user-attachments/assets/6abed5cb-ec69-41cd-8dee-6a223ef3bd14)
      
-     <img width="967" alt="SahneTasarım8" src="https://github.com/user-attachments/assets/8d7f3096-aba9-4e99- 
-     8f4f-d46edf09a3b5">
+     ![Tasarım1](https://github.com/user-attachments/assets/5ce1c121-8265-4f74-8465-313831035a4e)
      
-     <img width="966" alt="SahneTasarım4" src="https://github.com/user-attachments/assets/248e0f5c-349f-44d2- 
-     afe8-2623412f01ad">
+     ![Tasarım2](https://github.com/user-attachments/assets/eac7860a-8e02-43a5-a007-4c6176af5564)
      
-     <img width="314" alt="SahneTasarım5" src="https://github.com/user-attachments/assets/56a198a6-6bfe-4876- 
-     8ed4-758f7f403aad">
-
-     <img width="638" alt="SahneTasarım7" src="https://github.com/user-attachments/assets/b3137b79-b8a5-4f8c- 
-     b432-94b7371df7d0">
+     ![tasarım3](https://github.com/user-attachments/assets/34b54b19-e6b4-42c5-a783-51ac7353988c)
 
      
 
