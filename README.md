@@ -168,6 +168,15 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
      ➼ Sprint içinde tamamlanması tahmin edilen puan: 100 Puan
 
      ➼ Üçüncü sprint'in en az 100 puan ile tamamlanması gerektiğine karar verilmiştir ve hedefe ulaşılmıştır.
+
+     ➼ Daily Scrum: Daily Scrum toplantılarımız Whatsapp ve Discord uygulamalarından devam etmiştir. Discord 
+     üzerinden ekip üyelerin müsaitlik durumuna göre haftada birkaç gün toplantılar yapılmıştır.
+
+     ➼ Daily Scrum ScreenShot:
+
+     ![DailyScrum](https://github.com/user-attachments/assets/7b2addc3-8d5b-4b12-ad8d-a8406e4d7d54)
+
+     ![DailyScrum2](https://github.com/user-attachments/assets/c9ea0a61-58a8-4108-84d7-64bbcf516bf9)
      
 
      
