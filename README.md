@@ -179,7 +179,7 @@ https://github.com/mehmetercanoffical/Grup_78/assets/163590073/6d6522e8-48c1-4e6
 
      ![DailyScrum](https://github.com/user-attachments/assets/7b2addc3-8d5b-4b12-ad8d-a8406e4d7d54)
 
-     ![DailyScrum2](https://github.com/user-attachments/assets/c9ea0a61-58a8-4108-84d7-64bbcf516bf9)
+     ![DailyScrum2](https://github.com/user-attachments/assets/9200fc3e-e93f-42f2-adf8-62cc41a1c5a9)
      
      ➼ Tasarım ve Developing Kısmı: Üçüncü sprintte görev ayrımı gözetmeksizin projeye katılım sağlayan herkes 
      yazılımla ilgilenmiştir.
